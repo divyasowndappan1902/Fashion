@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Admin Dashboard - Stackly</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="dashboard-sidebar">
+            <a href="index.html" class="dashboard-logo">
+                <svg class="logo-icon" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L3 7V17L12 22L21 17V7L12 2Z" stroke="#0ea5e9" stroke-linejoin="round" stroke-width="2"></path>
+                    <path d="M12 22V12" stroke="#0ea5e9" stroke-linejoin="round" stroke-width="2"></path>
+                    <path d="M21 7L12 12" stroke="#0ea5e9" stroke-linejoin="round" stroke-width="2"></path>
+                    <path d="M3 7L12 12" stroke="#0ea5e9" stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                <span>STACKLY</span>
+            </a>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="active"><i class="fa-solid fa-chart-line"></i> Overview</a>
+                <a href="#"><i class="fa-solid fa-cart-flatbed"></i> Orders</a>
+                <a href="#"><i class="fa-solid fa-boxes-stacked"></i> Inventory</a>
+                <a href="#"><i class="fa-solid fa-users"></i> Customers</a>
+                <a href="#"><i class="fa-solid fa-chart-pie"></i> Analytics</a>
+                <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+                <a href="signin.html" style="margin-top: 1rem; color: #ef4444;"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out</a>
+            </nav>
+
+            <div class="role-badge">
+                <span>ACCOUNT TYPE</span>
+                <span>Admin</span>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <div>
+                    <span class="sub-heading">DASHBOARD</span>
+                    <h1 class="serif-heading">Store Overview</h1>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-title">Total Revenue (30d)</div>
+                    <div class="dashboard-card-value">$42,590</div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="dashboard-card-title">Active Orders</div>
+                    <div class="dashboard-card-value">18</div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="dashboard-card-title">New Customers (30d)</div>
+                    <div class="dashboard-card-value">124</div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h2 class="serif-heading" style="margin-bottom: 1.5rem; font-size: 1.75rem;">Recent Orders</h2>
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#STK-2024-893</td>
+                            <td>Emily Carter</td>
+                            <td>Just now</td>
+                            <td>$148.00</td>
+                            <td><span class="status-badge pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>#STK-2024-892</td>
+                            <td>Daniel Reed</td>
+                            <td>2 hours ago</td>
+                            <td>$345.00</td>
+                            <td><span class="status-badge shipped">Shipped</span></td>
+                        </tr>
+                        <tr>
+                            <td>#STK-2024-891</td>
+                            <td>Ida Sørensen</td>
+                            <td>Yesterday</td>
+                            <td>$148.00</td>
+                            <td><span class="status-badge delivered">Delivered</span></td>
+                        </tr>
+                        <tr>
+                            <td>#STK-2024-890</td>
+                            <td>Sophia Nguyen</td>
+                            <td>Yesterday</td>
+                            <td>$118.00</td>
+                            <td><span class="status-badge delivered">Delivered</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

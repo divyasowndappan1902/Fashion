@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stackly - Shop</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="header">
+<div class="logo">
+<svg class="logo-icon" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L3 7V17L12 22L21 17V7L12 2Z" stroke="#0ea5e9" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M12 22V12" stroke="#0ea5e9" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M21 7L12 12" stroke="#0ea5e9" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M3 7L12 12" stroke="#0ea5e9" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>STACKLY</span>
+</div>
+<nav class="nav-links">
+<a href="index.html">HOME</a>
+<a class="active" href="shop.html">SHOP</a>
+<a href="journal.html">JOURNAL</a>
+<a href="about.html">ABOUT</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+<div class="header-icons">
+<a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i> (1)</a>
+<a class="user" href="signin.html"><i class="fa-regular fa-user"></i></a>
+<a class="search" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+</div>
+</header>
+<main class="shop-page">
+<div class="shop-header">
+<span class="sub-heading">COLLECTION</span>
+<h1 class="serif-heading">Everything in the studio</h1>
+<p>29 pieces, restocked in small runs. Filter by category, price, colour and rating.</p>
+</div>
+<div class="shop-layout">
+<aside class="shop-sidebar">
+<div class="sidebar-header">
+<i class="fa-solid fa-sliders"></i> <span class="sidebar-title">FILTERS</span>
+</div>
+<div class="search-box">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input placeholder="Search pieces" type="text"/>
+</div>
+<div class="filter-group">
+<h4>CATEGORY</h4>
+<ul>
+<li><a class="active" href="#">All</a></li>
+<li><a href="#">Men's Wear</a></li>
+<li><a href="#">Women's Wear</a></li>
+<li><a href="#">Essentials</a></li>
+<li><a href="#">Accessories</a></li>
+</ul>
+</div>
+<div class="filter-group">
+<h4>PRICE</h4>
+<div class="pill-group">
+<span class="pill active">ANY PRICE</span>
+<span class="pill">UNDER $75</span>
+<span class="pill">$75 - $150</span>
+<span class="pill">$150 - $300</span>
+<span class="pill">OVER $300</span>
+</div>
+</div>
+<div class="filter-group">
+<h4>COLOUR</h4>
+<div class="pill-group">
+<span class="pill">BONE</span>
+<span class="pill">BUTTER</span>
+<span class="pill">CAMEL</span>
+<span class="pill">CHAMPAGNE</span>
+<span class="pill">CHESTNUT</span>
+<span class="pill">CLAY</span>
+<span class="pill">INDIGO</span>
+<span class="pill">INK</span>
+<span class="pill">IVORY</span>
+<span class="pill">NATURAL</span>
+<span class="pill">OAT</span>
+<span class="pill">OLIVE</span>
+<span class="pill">SAND</span>
+<span class="pill">SKY</span>
+<span class="pill">TORTOISE</span>
+</div>
+</div>
+<div class="filter-group">
+<h4>RATING</h4>
+<div class="pill-group">
+<span class="pill active">ANY</span>
+<span class="pill">4.5+</span>
+<span class="pill">4.7+</span>
+<span class="pill">4.9+</span>
+</div>
+</div>
+<div class="filter-checkbox">
+<input id="new-featured" type="checkbox"/>
+<label for="new-featured">New &amp; featured only</label>
+</div>
+</aside>
+<section class="shop-products">
+<div class="shop-products-header">
+<div class="product-count">
+<span class="sub-heading">29 PIECES</span>
+</div>
+<div class="sort-options">
+<span class="sub-heading">SORT</span>
+<div class="pill-group">
+<span class="pill active">FEATURED</span>
+<span class="pill">PRICE: LOW TO HIGH</span>
+<span class="pill">PRICE: HIGH TO LOW</span>
+<span class="pill">TOP RATED</span>
+<span class="pill">ALPHABETICAL</span>
+</div>
+</div>
+</div>
+<div class="product-grid shop-grid">
+<!-- Product 1 -->
+<div class="product-card">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Washed Oxford Shirt" src="shirt.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Washed Oxford Shirt</span>
+<span class="product-price">$88</span>
+</div>
+<span class="product-category">MEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">4.5 (2)</span>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="product-card">
+<div class="product-image">
+<span class="badge">ATELIER</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Unstructured Linen Blazer" src="jacket.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Unstructured Linen Blazer</span>
+<span class="product-price">$345</span>
+</div>
+<span class="product-category">MEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<span class="rating-score">4.9 (3)</span>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="product-card">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Raw Selvedge Denim" src="trouser.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Raw Selvedge Denim</span>
+<span class="product-price">$168</span>
+</div>
+<span class="product-category">MEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">4.6 (4)</span>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="product-card">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Ribbed Cotton Vest" src="vest.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Ribbed Cotton Vest</span>
+<span class="product-price">$48</span>
+</div>
+<span class="product-category">MEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<span class="rating-score">4.9 (2)</span>
+</div>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="product-card">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Double-Faced Wool Overcoat" src="overcoat.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Double-Faced Wool Overcoat</span>
+<span class="product-price">$465</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<span class="rating-score">5.0 (5)</span>
+</div>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="product-card">
+<div class="product-image">
+<span class="badge">NEW</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Silk Bias Slip Dress" src="slip_dress.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Silk Bias Slip Dress</span>
+<span class="product-price">$275</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<span class="rating-score">4.9 (4)</span>
+</div>
+</div>
+</div>
+<!-- Product 7 -->
+<div class="product-card">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Cropped Cotton Cardigan" src="cardigan.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Cropped Cotton Cardigan</span>
+<span class="product-price">$124</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">4.6 (2)</span>
+</div>
+</div>
+</div>
+<!-- Product 8 -->
+<div class="product-card">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Poplin Midi Skirt" src="coat.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Poplin Midi Skirt</span>
+<span class="product-price">$98</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">4.4 (3)</span>
+</div>
+</div>
+</div>
+<!-- Product 9 -->
+<div class="product-card">
+<div class="product-image">
+<span class="badge">ATELIER</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Cashmere Wrap Coat" src="jacket.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Cashmere Wrap Coat</span>
+<span class="product-price">$520</span>
+</div>
+<span class="product-category">MEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<span class="rating-score">5.0 (4)</span>
+</div>
+</div>
+</div>
+<!-- Product 10 -->
+<div class="product-card">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Sleeveless Linen Top" src="vest.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Sleeveless Linen Top</span>
+<span class="product-price">$74</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">4.5 (2)</span>
+</div>
+</div>
+</div>
+<!-- Product 11 -->
+<div class="product-card">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Tailored Crepe Trouser" src="trouser.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Tailored Crepe Trouser</span>
+<span class="product-price">$158</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">4.7 (3)</span>
+</div>
+</div>
+</div>
+<!-- Product 12 -->
+<div class="product-card">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Ribbed Lounge Set" src="cardigan.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Ribbed Lounge Set</span>
+<span class="product-price">$138</span>
+</div>
+<span class="product-category">ESSENTIALS</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">4.6 (4)</span>
+</div>
+</div>
+</div>
+<!-- Product 13 -->
+<div class="product-card">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Cotton Crew Socks (3-pack)" src="sneaker.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Cotton Crew Socks (3-pack)</span>
+<span class="product-price">$34</span>
+</div>
+<span class="product-category">ESSENTIALS</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">4.4 (2)</span>
+</div>
+</div>
+</div>
+<!-- Product 14 -->
+<div class="product-card">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Brushed Flannel Overshirt" src="shirt.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Brushed Flannel Overshirt</span>
+<span class="product-price">$145</span>
+</div>
+<span class="product-category">ESSENTIALS</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">4.7 (3)</span>
+</div>
+</div>
+</div>
+<!-- Product 15 -->
+<div class="product-card">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Hand-Sewn Leather Loafer" src="sneaker.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Hand-Sewn Leather Loafer</span>
+<span class="product-price">$285</span>
+</div>
+<span class="product-category">ESSENTIALS</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">4.8 (4)</span>
+</div>
+</div>
+</div>
+<!-- Product 16 -->
+<div class="product-card">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Woven Leather Belt" src="tee.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Woven Leather Belt</span>
+<span class="product-price">$78</span>
+</div>
+<span class="product-category">ACCESSORIES</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">4.5 (2)</span>
+</div>
+</div>
+</div>
+<!-- Product 17 -->
+<div class="product-card">
+<div class="product-image">
+<span class="badge">NEW</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Featherweight Cashmere Scarf" src="overcoat.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Featherweight Cashmere Scarf</span>
+<span class="product-price">$145</span>
+</div>
+<span class="product-category">ACCESSORIES</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<span class="rating-score">4.9 (3)</span>
+</div>
+</div>
+</div>
+<!-- Product 18 -->
+<div class="product-card">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Canvas Market Tote" src="coat.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Canvas Market Tote</span>
+<span class="product-price">$92</span>
+</div>
+<span class="product-category">ACCESSORIES</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">4.6 (4)</span>
+</div>
+</div>
+</div>
+<!-- Product 19 -->
+<div class="product-card">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Horn-Frame Sunglasses" src="cardigan.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Horn-Frame Sunglasses</span>
+<span class="product-price">$220</span>
+</div>
+<span class="product-category">ACCESSORIES</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">4.7 (2)</span>
+</div>
+</div>
+</div>
+<!-- Product 20 -->
+<div class="product-card">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Silk Twill Square" src="slip_dress.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Silk Twill Square</span>
+<span class="product-price">$58</span>
+</div>
+<span class="product-category">ACCESSORIES</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">4.3 (3)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="footer">
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="logo">
+<svg class="logo-icon" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L3 7V17L12 22L21 17V7L12 2Z" stroke="#0ea5e9" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M12 22V12" stroke="#0ea5e9" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M21 7L12 12" stroke="#0ea5e9" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M3 7L12 12" stroke="#0ea5e9" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>STACKLY</span>
+</div>
+<p>Premium looks, everyday comfort and honest prices — made in small runs.</p>
+</div>
+<div class="footer-links">
+<h4>SHOP</h4>
+<ul>
+<li><a href="#">New arrivals</a></li>
+<li><a href="#">Men's wear</a></li>
+<li><a href="#">Women's wear</a></li>
+</ul>
+</div>
+<div class="footer-links">
+<h4>COMPANY</h4>
+<ul>
+<li><a href="#">Our journey</a></li>
+<li><a href="#">Journal</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">Account</a></li>
+</ul>
+</div>
+<div class="footer-links">
+<h4>FOLLOW</h4>
+<ul>
+<li><a href="#">Instagram — @stackly.studio</a></li>
+<li><a href="#">Pinterest — @stackly</a></li>
+<li><a href="#">hello@stackly.com</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 Stackly. All rights reserved.</p>
+<p>Crafted for everyday</p>
+</div>
+</footer>
+</body>
+</html>

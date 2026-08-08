@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Create Account - Stackly</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="auth-page">
+    <div class="auth-layout">
+        <div class="auth-image">
+            <img src="coat.jpg" alt="Stackly Collection">
+        </div>
+        <div class="auth-content">
+            <div class="auth-header">
+                <span class="sub-heading">ACCOUNT</span>
+                <h1 class="serif-heading">Create your account</h1>
+                <p>Join Stackly for early access to drops, saved sizing and a faster checkout.</p>
+            </div>
+
+            <div class="auth-tabs">
+                <a href="signin.html" class="auth-tab">SIGN IN</a>
+                <a href="signup.html" class="auth-tab active">CREATE ACCOUNT</a>
+            </div>
+
+            <form class="auth-form" id="signup-form">
+                <div class="role-selector">
+                    <input type="radio" id="role-customer" name="role" value="customer" checked>
+                    <label for="role-customer" class="role-option">Customer</label>
+                    
+                    <input type="radio" id="role-admin" name="role" value="admin">
+                    <label for="role-admin" class="role-option">Admin</label>
+                    
+                    <div class="role-slider"></div>
+                </div>
+
+                <div class="input-group">
+                    <label>FULL NAME</label>
+                    <input type="text" placeholder="Ida Sørensen">
+                </div>
+                <div class="input-group">
+                    <label>EMAIL</label>
+                    <input type="email" placeholder="you@example.com">
+                </div>
+                <div class="input-group">
+                    <label>PASSWORD</label>
+                    <input type="password" placeholder="........">
+                </div>
+                <button type="submit" class="auth-submit-btn">CREATE ACCOUNT <i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+
+            <script>
+                document.getElementById('signup-form').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const role = document.querySelector('input[name="role"]:checked').value;
+                    if (role === 'admin') {
+                        window.location.href = 'admin-dashboard.html';
+                    } else {
+                        window.location.href = 'customer-dashboard.html';
+                    }
+                });
+            </script>
+
+            <div class="auth-divider">
+                <span>OR CONTINUE WITH</span>
+            </div>
+
+            <div class="social-login">
+                <button class="social-btn">
+                    <span>CONTINUE WITH GOOGLE</span>
+                    <span class="social-handle">@STACKLY</span>
+                </button>
+                <button class="social-btn">
+                    <span>CONTINUE WITH APPLE</span>
+                    <span class="social-handle">@STACKLY</span>
+                </button>
+                <button class="social-btn">
+                    <span>CONTINUE WITH INSTAGRAM</span>
+                    <span class="social-handle">@STACKLY.STUDIO</span>
+                </button>
+            </div>
+
+            <div class="auth-footer">
+                <p class="auth-feature"><i class="fa-solid fa-check"></i> Your session, bag and saved pieces stay on this device.</p>
+                <p class="auth-terms">By continuing you agree to our terms and privacy policy. Need help? <a href="#">Contact the studio</a>.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
