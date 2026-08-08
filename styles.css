@@ -3,7 +3,7 @@
     --text-dark: #000000;
     --text-gray: #000000;
     --text-light: #ffffff;
-    --bg-light: #ffffff;
+    --bg-light: #E8D5C0;
     --border-color: #e5e7eb;
 }
 
@@ -28,6 +28,10 @@ body {
     align-items: center;
     padding: 1.5rem max(4rem, calc((100% - 1200px) / 2));
     background-color: var(--bg-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .logo {
@@ -40,9 +44,10 @@ body {
     color: var(--text-dark);
 }
 
-.logo-icon {
-    width: 24px;
-    height: 24px;
+.logo-img {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-links {
@@ -93,7 +98,8 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 600px;
+    height: calc(100vh - 80px);
+    min-height: 600px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -496,7 +502,7 @@ body {
 
 /* Testimonials Section */
 .testimonials {
-    background-color: #f9f5eb;
+    background-color: var(--bg-light);
     padding: 5rem max(4rem, calc((100% - 1200px) / 2));
 }
 
@@ -572,6 +578,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.journal-card:hover {
+    transform: translateY(-5px);
 }
 
 .journal-card img {
@@ -580,6 +592,11 @@ body {
     object-fit: cover;
     background-color: #f3ede6;
     mix-blend-mode: multiply;
+    transition: transform 0.6s ease;
+}
+
+.journal-card:hover img {
+    transform: scale(1.05);
 }
 
 .journal-info {
@@ -605,6 +622,38 @@ body {
     font-size: 0.9rem;
     color: var(--text-gray);
     line-height: 1.6;
+}
+
+.read-more-btn {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid var(--text-dark);
+    align-self: flex-start;
+    padding-bottom: 0.2rem;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    color: var(--text-gray);
+    border-color: var(--text-gray);
+}
+
+/* Responsive Journal Grid */
+@media (max-width: 900px) {
+    .journal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .journal-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Newsletter Section */
@@ -992,7 +1041,7 @@ body {
 
 /* --- Brand Commitments Section --- */
 .brand-commitments {
-  background-color: #F7F5EF;
+  background-color: var(--bg-light);
   padding: 6rem 2rem;
 }
 
@@ -1472,3 +1521,298 @@ body {
 .status-badge.pending { background-color: #fef3c7; color: #92400e; }
 .status-badge.shipped { background-color: #d1fae5; color: #065f46; }
 .status-badge.delivered { background-color: #e0e7ff; color: #3730a3; }
+
+
+/* Team Section */
+.team-section {
+    padding: 5rem max(4rem, calc((100% - 1200px) / 2));
+    background-color: var(--bg-light);
+    text-align: center;
+}
+.team-header {
+    margin-bottom: 4rem;
+}
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.team-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    background-color: #f3ede6;
+    transition: transform 0.6s ease;
+}
+.team-img-wrapper {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.team-card:hover img {
+    transform: scale(1.05);
+}
+.team-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+}
+.team-role {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+}
+
+@media (max-width: 900px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 6rem max(4rem, calc((100% - 1200px) / 2));
+    background-color: var(--bg-light);
+    text-align: center;
+}
+.pricing-header {
+    margin-bottom: 4rem;
+}
+.pricing-header h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+.pricing-header p {
+    color: var(--text-gray);
+    font-size: 1rem;
+}
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.pricing-card {
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+.pricing-card.premium {
+    background-color: #000000;
+    color: #ffffff;
+    position: relative;
+}
+.pricing-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.pricing-card p {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+}
+.pricing-card.premium h3 {
+    color: #ffffff;
+}
+.pricing-card.premium p {
+    color: #a0a0a0;
+}
+.pricing-card .price {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+.pricing-card .period {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    margin-bottom: 2.5rem;
+}
+.pricing-card.premium .period {
+    color: #a0a0a0;
+}
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3rem 0;
+    flex-grow: 1;
+}
+.pricing-features li {
+    font-size: 0.9rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.pricing-card.premium .pricing-features li {
+    border-bottom: 1px solid #333333;
+}
+.pricing-features li i {
+    font-size: 0.8rem;
+}
+.pricing-btn {
+    padding: 1rem;
+    border: 1px solid var(--text-dark);
+    background: transparent;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+.pricing-btn:hover {
+    background-color: var(--text-dark);
+    color: #ffffff;
+}
+.pricing-card.premium .pricing-btn {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+.pricing-card.premium .pricing-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+.popular-badge {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+    letter-spacing: 0.1em;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 6rem max(4rem, calc((100% - 1200px) / 2));
+    background-color: var(--bg-light);
+}
+.faq-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+}
+.faq-left {
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+}
+.faq-left .sub-heading {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.faq-left h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+.faq-left p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+.faq-btn {
+    padding: 1rem 2rem;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.faq-btn:hover {
+    background-color: #333333;
+}
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+}
+.faq-item {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+}
+.faq-item.active {
+    border-color: #000000;
+}
+.faq-question {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    user-select: none;
+}
+.faq-icon {
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+    font-weight: 300;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 2rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+.faq-item.active .faq-answer {
+    padding: 0 2rem 1.5rem 2rem;
+    max-height: 500px; /* Arbitrary large number to allow animation */
+}
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+.faq-item.active .faq-icon::before {
+    content: "\f068"; /* Minus icon if using font awesome, or we can just rotate a plus */
+}
+
+@media (max-width: 900px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    .faq-container {
+        grid-template-columns: 1fr;
+    }
+    .faq-left {
+        position: static;
+    }
+}
+
+
