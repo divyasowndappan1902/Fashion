@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -11,14 +11,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
     <!-- FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="auth-page">
+
+    <!-- Mobile Header -->
+    <header class="mobile-auth-header">
+        <a href="index.html" class="logo">
+            <img src="assets/logo_0174.webp" alt="STACKLY Logo" class="logo-img" style="height: 24px;">
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" style="background: none; border: none; cursor: pointer; color: var(--text-dark);">
+            <span class="material-symbols-outlined" style="font-size: 1.5rem;">menu</span>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="shop.html">SHOP</a>
+            <a href="journal.html">JOURNAL</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="signin.html" class="mobile-only">LOGIN</a>
+        </nav>
+    </header>
+
     <div class="auth-layout">
         <div class="auth-image">
             <img src="assets/coat.webp" alt="Stackly Collection">
         </div>
         <div class="auth-content">
-            <div style="margin-bottom: 3rem;">
+            <div style="margin-bottom: 3rem;" class="auth-logo-container">
                 <a href="index.html">
                     <img src="assets/logo_0174.webp" alt="STACKLY Logo" style="height: 24px;" />
                 </a>
@@ -48,7 +68,7 @@
 
                 <div class="input-group">
                     <label>FULL NAME</label>
-                    <input type="text" placeholder="Ida Sørensen" required>
+                    <input type="text" placeholder="Ida S�rensen" required>
                 </div>
                 <div class="input-group">
                     <label>EMAIL</label>
@@ -84,7 +104,7 @@
                     <span class="social-handle">@STACKLY</span>
                 </button>
                 <button class="social-btn">
-                    <span>CONTINUE WITH Instagram â€· @stackly.studio</span>
+                    <span>CONTINUE WITH Instagram ‷ @stackly.studio</span>
                 </button>
             </div>
 
@@ -115,8 +135,11 @@
         }
     });
 </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
+
+
 
 
 

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -9,6 +9,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 <header class="header">
@@ -18,12 +19,12 @@
 <button class="mobile-menu-toggle" aria-label="Toggle menu" style="display: none; background: none; border: none; cursor: pointer; color: var(--text-dark);"><span class="material-symbols-outlined" style="font-size: 1.5rem;">menu</span></button>
         <nav class="nav-links">
 <a href="index.html">HOME</a>
-<a class="active" href="shop.html">SHOP</a>
+<a  href="shop.html" >SHOP</a>
 <a href="journal.html">JOURNAL</a>
 <a href="about.html">ABOUT</a>
 <a href="contact.html">CONTACT</a>
     <a href="signin.html" class="mobile-only">LOGIN</a>
-</nav>
+        </nav>
 <div class="header-icons">
 <a class="cart" href="404.html"><span class="material-symbols-outlined" style="vertical-align: middle;">shopping_cart</span> (1)</a>
 <a class="user" href="signin.html"><span class="material-symbols-outlined" style="vertical-align: middle;">person</span></a>
@@ -122,7 +123,7 @@
 </div>
 <div class="product-grid shop-grid">
 <!-- Product 1 -->
-<div class="product-card" data-category="WOMEN'S WEAR" data-price="350" data-rating="4.5" data-color="SAND" data-size="M" data-name="Silk Bias Slip Dress">
+<div class="product-card" data-aos="fade-up" data-category="WOMEN'S WEAR" data-price="350" data-rating="4.5" data-color="SAND" data-size="M" data-name="Silk Bias Slip Dress">
 <div class="product-image">
 <span class="badge">NEW</span>
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
@@ -144,7 +145,7 @@
 </div>
 </div>
 <!-- Product 2 -->
-<div class="product-card" data-category="WOMEN'S WEAR" data-price="180" data-rating="4.5" data-color="INK" data-size="XS" data-name="Midi Slip Dress">
+<div class="product-card" data-aos="fade-up" data-category="WOMEN'S WEAR" data-price="180" data-rating="4.5" data-color="INK" data-size="XS" data-name="Midi Slip Dress">
 <div class="product-image">
 <span class="badge">ATELIER</span>
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
@@ -166,7 +167,7 @@
 </div>
 </div>
 <!-- Product 3 -->
-<div class="product-card" data-category="WOMEN'S WEAR" data-price="710" data-rating="4.5" data-color="NATURAL" data-size="XL" data-name="Satin Evening Dress">
+<div class="product-card" data-aos="fade-up" data-category="WOMEN'S WEAR" data-price="710" data-rating="4.5" data-color="NATURAL" data-size="XL" data-name="Satin Evening Dress">
 <div class="product-image">
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Satin Evening Dress" src="assets/evening_gown.webp"/>
@@ -187,10 +188,10 @@
 </div>
 </div>
 <!-- Product 4 -->
-<div class="product-card" data-category="MEN'S WEAR" data-price="950" data-rating="4" data-color="INDIGO" data-size="XL" data-name="Ribbed Cotton Vest">
+<div class="product-card" data-aos="fade-up" data-category="MEN'S WEAR" data-price="950" data-rating="4" data-color="INDIGO" data-size="XL" data-name="Ribbed Cotton Vest">
 <div class="product-image">
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
-<img alt="Ribbed Cotton Vest" src="assets/ribbed_cotton_vest.jpg"/>
+<img alt="Ribbed Cotton Vest" src="assets/ribbed_cotton_vest.webp"/>
 </div>
 <div class="product-info">
 <div class="product-title-row">
@@ -208,10 +209,10 @@
 </div>
 </div>
 <!-- Product 5 -->
-<div class="product-card" data-category="WOMEN'S WEAR" data-price="510" data-rating="4.5" data-color="BUTTER" data-size="XL" data-name="Silk Camisole Top">
+<div class="product-card" data-aos="fade-up" data-category="WOMEN'S WEAR" data-price="510" data-rating="4.5" data-color="BUTTER" data-size="XL" data-name="Silk Camisole Top">
 <div class="product-image">
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
-<img alt="Silk Camisole Top" src="assets/silk_camisole_top.jpg"/>
+<img alt="Silk Camisole Top" src="assets/silk_camisole_top.webp"/>
 </div>
 <div class="product-info">
 <div class="product-title-row">
@@ -229,11 +230,11 @@
 </div>
 </div>
 <!-- Product 6 -->
-<div class="product-card" data-category="MEN'S WEAR" data-price="300" data-rating="4.5" data-color="BONE" data-size="S" data-name="Fine Knit Vest">
+<div class="product-card" data-aos="fade-up" data-category="MEN'S WEAR" data-price="300" data-rating="4.5" data-color="BONE" data-size="S" data-name="Fine Knit Vest">
 <div class="product-image">
 <span class="badge">NEW</span>
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
-<img alt="Fine Knit Vest" src="assets/fine_knit_vest.jpg"/>
+<img alt="Fine Knit Vest" src="assets/fine_knit_vest.webp"/>
 </div>
 <div class="product-info">
 <div class="product-title-row">
@@ -251,10 +252,10 @@
 </div>
 </div>
 <!-- Product 7 -->
-<div class="product-card" data-category="MEN'S WEAR" data-price="830" data-rating="4.5" data-color="INK" data-size="M" data-name="Washed Oxford Shirt">
+<div class="product-card" data-aos="fade-up" data-category="MEN'S WEAR" data-price="830" data-rating="4.5" data-color="INK" data-size="M" data-name="Washed Oxford Shirt">
 <div class="product-image">
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
-<img alt="Washed Oxford Shirt" src="assets/washed_oxford_shirt.jpg"/>
+<img alt="Washed Oxford Shirt" src="assets/washed_oxford_shirt.webp"/>
 </div>
 <div class="product-info">
 <div class="product-title-row">
@@ -272,11 +273,11 @@
 </div>
 </div>
 <!-- Product 8 -->
-<div class="product-card" data-category="WOMEN'S WEAR" data-price="900" data-rating="4.5" data-color="CHESTNUT" data-size="S" data-name="Oversized Poplin Shirt">
+<div class="product-card" data-aos="fade-up" data-category="WOMEN'S WEAR" data-price="900" data-rating="4.5" data-color="CHESTNUT" data-size="S" data-name="Oversized Poplin Shirt">
 <div class="product-image">
 <span class="badge">POPULAR</span>
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
-<img alt="Oversized Poplin Shirt" src="assets/oversized_poplin_shirt.jpg"/>
+<img alt="Oversized Poplin Shirt" src="assets/oversized_poplin_shirt.webp"/>
 </div>
 <div class="product-info">
 <div class="product-title-row">
@@ -294,10 +295,10 @@
 </div>
 </div>
 <!-- Product 9 -->
-<div class="product-card" data-category="MEN'S WEAR" data-price="750" data-rating="4.5" data-color="NATURAL" data-size="S" data-name="Boxy Fit Oxford Shirt">
+<div class="product-card" data-aos="fade-up" data-category="MEN'S WEAR" data-price="750" data-rating="4.5" data-color="NATURAL" data-size="S" data-name="Boxy Fit Oxford Shirt">
 <div class="product-image">
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
-<img alt="Boxy Fit Oxford Shirt" src="assets/boxy_fit_oxford_shirt.jpg"/>
+<img alt="Boxy Fit Oxford Shirt" src="assets/boxy_fit_oxford_shirt.webp"/>
 </div>
 <div class="product-info">
 <div class="product-title-row">
@@ -315,7 +316,7 @@
 </div>
 </div>
 <!-- Product 10 -->
-<div class="product-card" data-category="WOMEN'S WEAR" data-price="540" data-rating="4.5" data-color="IVORY" data-size="S" data-name="Classic Trench Coat">
+<div class="product-card" data-aos="fade-up" data-category="WOMEN'S WEAR" data-price="540" data-rating="4.5" data-color="IVORY" data-size="S" data-name="Classic Trench Coat">
 <div class="product-image">
 <span class="badge">EXCLUSIVE</span>
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
@@ -337,7 +338,7 @@
 </div>
 </div>
 <!-- Product 11 -->
-<div class="product-card" data-category="WOMEN'S WEAR" data-price="530" data-rating="4.5" data-color="OAT" data-size="S" data-name="Double-Breasted Trench">
+<div class="product-card" data-aos="fade-up" data-category="WOMEN'S WEAR" data-price="530" data-rating="4.5" data-color="OAT" data-size="S" data-name="Double-Breasted Trench">
 <div class="product-image">
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Double-Breasted Trench" src="assets/double_breasted_trench.webp"/>
@@ -358,7 +359,7 @@
 </div>
 </div>
 <!-- Product 12 -->
-<div class="product-card" data-category="WOMEN'S WEAR" data-price="530" data-rating="4.5" data-color="INK" data-size="M" data-name="Belted Cotton Coat">
+<div class="product-card" data-aos="fade-up" data-category="WOMEN'S WEAR" data-price="530" data-rating="4.5" data-color="INK" data-size="M" data-name="Belted Cotton Coat">
 <div class="product-image">
 <span class="badge">ATELIER</span>
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
@@ -380,11 +381,11 @@
 </div>
 </div>
 <!-- Product 13 -->
-<div class="product-card" data-category="MEN'S WEAR" data-price="160" data-rating="4.5" data-color="CLAY" data-size="M" data-name="Raw Selvedge Denim">
+<div class="product-card" data-aos="fade-up" data-category="MEN'S WEAR" data-price="160" data-rating="4.5" data-color="CLAY" data-size="M" data-name="Raw Selvedge Denim">
 <div class="product-image">
 <span class="badge">POPULAR</span>
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
-<img alt="Raw Selvedge Denim" src="assets/raw_selvedge_denim.jpg"/>
+<img alt="Raw Selvedge Denim" src="assets/raw_selvedge_denim.webp"/>
 </div>
 <div class="product-info">
 <div class="product-title-row">
@@ -402,10 +403,10 @@
 </div>
 </div>
 <!-- Product 14 -->
-<div class="product-card" data-category="WOMEN'S WEAR" data-price="120" data-rating="4.5" data-color="OAT" data-size="S" data-name="Wide-Leg Linen Trousers">
+<div class="product-card" data-aos="fade-up" data-category="WOMEN'S WEAR" data-price="120" data-rating="4.5" data-color="OAT" data-size="S" data-name="Wide-Leg Linen Trousers">
 <div class="product-image">
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
-<img alt="Wide-Leg Linen Trousers" src="assets/wide_leg_linen_trousers.jpg"/>
+<img alt="Wide-Leg Linen Trousers" src="assets/wide_leg_linen_trousers.webp"/>
 </div>
 <div class="product-info">
 <div class="product-title-row">
@@ -423,7 +424,7 @@
 </div>
 </div>
 <!-- Product 15 -->
-<div class="product-card" data-category="WOMEN'S WEAR" data-price="930" data-rating="4.5" data-color="OLIVE" data-size="XS" data-name="High-Rise Straight Jeans">
+<div class="product-card" data-aos="fade-up" data-category="WOMEN'S WEAR" data-price="930" data-rating="4.5" data-color="OLIVE" data-size="XS" data-name="High-Rise Straight Jeans">
 <div class="product-image">
 <span class="badge">POPULAR</span>
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
@@ -445,7 +446,7 @@
 </div>
 </div>
 <!-- Product 16 -->
-<div class="product-card" data-category="MEN'S WEAR" data-price="600" data-rating="4.5" data-color="NATURAL" data-size="L" data-name="Unstructured Linen Blazer">
+<div class="product-card" data-aos="fade-up" data-category="MEN'S WEAR" data-price="600" data-rating="4.5" data-color="NATURAL" data-size="L" data-name="Unstructured Linen Blazer">
 <div class="product-image">
 <span class="badge">ATELIER</span>
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
@@ -467,7 +468,7 @@
 </div>
 </div>
 <!-- Product 17 -->
-<div class="product-card" data-category="WOMEN'S WEAR" data-price="130" data-rating="5" data-color="CAMEL" data-size="M" data-name="Tailored Wool Blazer">
+<div class="product-card" data-aos="fade-up" data-category="WOMEN'S WEAR" data-price="130" data-rating="5" data-color="CAMEL" data-size="M" data-name="Tailored Wool Blazer">
 <div class="product-image">
 <span class="badge">ATELIER</span>
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
@@ -489,7 +490,7 @@
 </div>
 </div>
 <!-- Product 18 -->
-<div class="product-card" data-category="MEN'S WEAR" data-price="980" data-rating="5" data-color="SAND" data-size="XL" data-name="Cashmere Blend Blazer">
+<div class="product-card" data-aos="fade-up" data-category="MEN'S WEAR" data-price="980" data-rating="5" data-color="SAND" data-size="XL" data-name="Cashmere Blend Blazer">
 <div class="product-image">
 <span class="badge">EXCLUSIVE</span>
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
@@ -511,7 +512,7 @@
 </div>
 </div>
 <!-- Product 19 -->
-<div class="product-card" data-category="WOMEN'S WEAR" data-price="110" data-rating="5" data-color="SKY" data-size="XS" data-name="Double-Faced Wool Overcoat">
+<div class="product-card" data-aos="fade-up" data-category="WOMEN'S WEAR" data-price="110" data-rating="5" data-color="SKY" data-size="XS" data-name="Double-Faced Wool Overcoat">
 <div class="product-image">
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Double-Faced Wool Overcoat" src="assets/double_faced_wool_overcoat.webp"/>
@@ -532,7 +533,7 @@
 </div>
 </div>
 <!-- Product 20 -->
-<div class="product-card" data-category="WOMEN'S WEAR" data-price="520" data-rating="4.5" data-color="SKY" data-size="XL" data-name="Structured Wool Coat">
+<div class="product-card" data-aos="fade-up" data-category="WOMEN'S WEAR" data-price="520" data-rating="4.5" data-color="SKY" data-size="XL" data-name="Structured Wool Coat">
 <div class="product-image">
 <span class="badge">ATELIER</span>
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
@@ -554,7 +555,7 @@
 </div>
 </div>
 <!-- Product 21 -->
-<div class="product-card" data-category="MEN'S WEAR" data-price="500" data-rating="4.5" data-color="INK" data-size="L" data-name="Heavy Cashmere Coat">
+<div class="product-card" data-aos="fade-up" data-category="MEN'S WEAR" data-price="500" data-rating="4.5" data-color="INK" data-size="L" data-name="Heavy Cashmere Coat">
 <div class="product-image">
 <span class="badge">EXCLUSIVE</span>
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
@@ -576,7 +577,7 @@
 </div>
 </div>
 <!-- Product 22 -->
-<div class="product-card" data-category="WOMEN'S WEAR" data-price="80" data-rating="4.5" data-color="TORTOISE" data-size="S" data-name="Cropped Cotton Cardigan">
+<div class="product-card" data-aos="fade-up" data-category="WOMEN'S WEAR" data-price="80" data-rating="4.5" data-color="TORTOISE" data-size="S" data-name="Cropped Cotton Cardigan">
 <div class="product-image">
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Cropped Cotton Cardigan" src="assets/cropped_cotton_cardigan.webp"/>
@@ -597,7 +598,7 @@
 </div>
 </div>
 <!-- Product 23 -->
-<div class="product-card" data-category="WOMEN'S WEAR" data-price="740" data-rating="4.5" data-color="INK" data-size="M" data-name="Chunky Knit Cardigan">
+<div class="product-card" data-aos="fade-up" data-category="WOMEN'S WEAR" data-price="740" data-rating="4.5" data-color="INK" data-size="M" data-name="Chunky Knit Cardigan">
 <div class="product-image">
 <span class="badge">NEW</span>
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
@@ -619,7 +620,7 @@
 </div>
 </div>
 <!-- Product 24 -->
-<div class="product-card" data-category="MEN'S WEAR" data-price="520" data-rating="4.5" data-color="INK" data-size="XS" data-name="Ribbed Wool Cardigan">
+<div class="product-card" data-aos="fade-up" data-category="MEN'S WEAR" data-price="520" data-rating="4.5" data-color="INK" data-size="XS" data-name="Ribbed Wool Cardigan">
 <div class="product-image">
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Ribbed Wool Cardigan" src="assets/ribbed_wool_cardigan.webp"/>
@@ -640,7 +641,7 @@
 </div>
 </div>
 <!-- Product 25 -->
-<div class="product-card" data-category="ESSENTIALS" data-price="250" data-rating="4.5" data-color="SKY" data-size="XS" data-name="Classic White Tee">
+<div class="product-card" data-aos="fade-up" data-category="ESSENTIALS" data-price="250" data-rating="4.5" data-color="SKY" data-size="XS" data-name="Classic White Tee">
 <div class="product-image">
 <span class="badge">RESTOCKED</span>
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
@@ -662,7 +663,7 @@
 </div>
 </div>
 <!-- Product 26 -->
-<div class="product-card" data-category="MEN'S WEAR" data-price="210" data-rating="4.5" data-color="IVORY" data-size="M" data-name="Heavyweight Cotton Crew">
+<div class="product-card" data-aos="fade-up" data-category="MEN'S WEAR" data-price="210" data-rating="4.5" data-color="IVORY" data-size="M" data-name="Heavyweight Cotton Crew">
 <div class="product-image">
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Heavyweight Cotton Crew" src="assets/heavyweight_cotton_crew.webp"/>
@@ -683,7 +684,7 @@
 </div>
 </div>
 <!-- Product 27 -->
-<div class="product-card" data-category="ESSENTIALS" data-price="770" data-rating="4.5" data-color="BUTTER" data-size="M" data-name="Slub Cotton T-Shirt">
+<div class="product-card" data-aos="fade-up" data-category="ESSENTIALS" data-price="770" data-rating="4.5" data-color="BUTTER" data-size="M" data-name="Slub Cotton T-Shirt">
 <div class="product-image">
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Slub Cotton T-Shirt" src="assets/slub_cotton_t_shirt.webp"/>
@@ -704,7 +705,7 @@
 </div>
 </div>
 <!-- Product 28 -->
-<div class="product-card" data-category="MEN'S WEAR" data-price="550" data-rating="4.5" data-color="NATURAL" data-size="S" data-name="Performance Active Tee">
+<div class="product-card" data-aos="fade-up" data-category="MEN'S WEAR" data-price="550" data-rating="4.5" data-color="NATURAL" data-size="S" data-name="Performance Active Tee">
 <div class="product-image">
 <span class="badge">NEW</span>
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
@@ -726,7 +727,7 @@
 </div>
 </div>
 <!-- Product 29 -->
-<div class="product-card" data-category="ESSENTIALS" data-price="660" data-rating="4" data-color="OAT" data-size="L" data-name="Breathable Cotton Top">
+<div class="product-card" data-aos="fade-up" data-category="ESSENTIALS" data-price="660" data-rating="4" data-color="OAT" data-size="L" data-name="Breathable Cotton Top">
 <div class="product-image">
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Breathable Cotton Top" src="assets/breathable_cotton_top.webp"/>
@@ -747,7 +748,7 @@
 </div>
 </div>
 <!-- Product 30 -->
-<div class="product-card" data-category="WOMEN'S WEAR" data-price="410" data-rating="4.5" data-color="CHESTNUT" data-size="XL" data-name="Seamless Knit Tee">
+<div class="product-card" data-aos="fade-up" data-category="WOMEN'S WEAR" data-price="410" data-rating="4.5" data-color="CHESTNUT" data-size="XL" data-name="Seamless Knit Tee">
 <div class="product-image">
 <span class="badge">POPULAR</span>
 <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
@@ -772,13 +773,13 @@
 </section>
 </div>
 </main>
-<footer class="footer">
+<footer data-aos="fade-up" class="footer">
     <div class="footer-grid">
         <div class="footer-brand">
             <div class="logo">
                 <img src="assets/logo_0174.webp" alt="STACKLY Logo" class="logo-img" />
             </div>
-            <p>Premium looks, everyday comfort and honest pricing—made for real life.</p>
+            <p>Premium looks, everyday comfort and honest pricing�made for real life.</p>
         </div>
         <div class="footer-links">
             <h4>SHOP</h4>
@@ -800,14 +801,14 @@
         <div class="footer-links">
             <h4>FOLLOW</h4>
             <ul>
-                <li><a href="404.html">Instagram — @stackly.studio</a></li>
-                <li><a href="404.html">Pinterest — @stackly</a></li>
+                <li><a href="404.html">Instagram � @stackly.studio</a></li>
+                <li><a href="404.html">Pinterest � @stackly</a></li>
                 <li><a href="404.html">hello@stackly.com</a></li>
             </ul>
         </div>
     </div>
     <div class="footer-bottom">
-        <p>© 2024 Stackly. All rights reserved.</p>
+        <p>� 2024 Stackly. All rights reserved.</p>
         <p>Order for surprise</p>
     </div>
 </footer>
@@ -831,8 +832,10 @@
         }
     });
 </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
+
 
 
 

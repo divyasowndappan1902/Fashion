@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet"/>
 <!-- FontAwesome -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 <header class="header">
@@ -20,13 +21,13 @@
 </div>
 <button class="mobile-menu-toggle" aria-label="Toggle menu" style="display: none; background: none; border: none; cursor: pointer; color: var(--text-dark);"><span class="material-symbols-outlined" style="font-size: 1.5rem;">menu</span></button>
         <nav class="nav-links">
-<a class="active" href="index.html">HOME</a>
+<a  href="index.html" >HOME</a>
 <a href="shop.html">SHOP</a>
 <a href="journal.html">JOURNAL</a>
 <a href="about.html">ABOUT</a>
 <a href="contact.html">CONTACT</a>
     <a href="signin.html" class="mobile-only">LOGIN</a>
-</nav>
+        </nav>
 <div class="header-icons">
 <a class="cart" href="cart.html">
 <span class="material-symbols-outlined" style="vertical-align: middle;">shopping_cart</span> (1)
@@ -73,7 +74,7 @@
 <div class="product-grid">
 
     <!-- Product 1 -->
-    <div class="product-card">
+    <div class="product-card" data-aos="fade-up">
         <div class="product-image">
             <span class="badge">NEW</span>
             <img alt="Olive Knit Cardigan" src="assets/cardigan.webp"/>
@@ -93,7 +94,7 @@
     </div>
 
     <!-- Product 2 -->
-    <div class="product-card">
+    <div class="product-card" data-aos="fade-up">
         <div class="product-image">
             <img alt="Ivory Oversized Shirt" src="assets/casual_shirt.webp"/>
         </div>
@@ -112,7 +113,7 @@
     </div>
 
     <!-- Product 3 -->
-    <div class="product-card">
+    <div class="product-card" data-aos="fade-up">
         <div class="product-image">
             <span class="badge">BESTSELLER</span>
             <img alt="Linen Wide-Leg Trouser" src="assets/linen_trousers.webp"/>
@@ -132,7 +133,7 @@
     </div>
 
     <!-- Product 4 -->
-    <div class="product-card">
+    <div class="product-card" data-aos="fade-up">
         <div class="product-image">
             <img alt="Low-Top Leather Sneaker" src="assets/leather_sneaker.webp"/>
         </div>
@@ -250,7 +251,7 @@
         <a class="view-all-btn" href="404.html">READ THE JOURNAL <span class="material-symbols-outlined" style="vertical-align: middle;">arrow_forward</span></a>
     </div>
     <div class="journal-grid">
-        <div class="journal-card">
+        <div class="journal-card" data-aos="fade-up">
             <img src="assets/coat.webp" alt="The Quiet Wardrobe">
             <div class="journal-info">
                 <span class="journal-meta">STYLING ·Ã‚Â· 6 MIN</span>
@@ -258,7 +259,7 @@
                 <p>Nine pieces, one palette. How to build a season of outfits from garments that never compete with each other.</p>
             </div>
         </div>
-        <div class="journal-card">
+        <div class="journal-card" data-aos="fade-up">
             <img src="assets/trouser.webp" alt="Inside the Linen Mill">
             <div class="journal-info">
                 <span class="journal-meta">CRAFT ·Ã‚Â· 8 MIN</span>
@@ -266,7 +267,7 @@
                 <p>A week in Northern Portugal with the family-run mill that weaves every metre of our wide-leg trousers.</p>
             </div>
         </div>
-        <div class="journal-card">
+        <div class="journal-card" data-aos="fade-up">
             <img src="assets/cardigan.webp" alt="Knitwear That Lasts a Decade">
             <div class="journal-info">
                 <span class="journal-meta">CARE ·Ã‚Â· 5 MIN</span>
@@ -388,7 +389,7 @@
 </section>
 
 </main>
-<footer class="footer">
+<footer data-aos="fade-up" class="footer">
     <div class="footer-grid">
         <div class="footer-brand">
             <div class="logo">
@@ -448,8 +449,10 @@
         }
     });
 </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
+
 
 
 

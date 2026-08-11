@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -11,26 +11,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
     <!-- FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+<body class="dashboard-page">
+    <div class="dashboard-mobile-header">
+        <a href="index.html" class="dashboard-logo">
+            <img src="assets/logo_0174.webp" alt="STACKLY Logo" class="logo-img" />
+        </a>
+        <button class="dashboard-mobile-toggle">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </div>
+    
     <div class="dashboard-layout">
         <aside class="dashboard-sidebar">
+            <button class="close-dashboard-btn">
+                <span class="material-symbols-outlined">close</span>
+            </button>
             <a href="index.html" class="dashboard-logo">
                 <img src="assets/logo_0174.webp" alt="STACKLY Logo" class="logo-img" />
             </a>
             
             <nav class="sidebar-nav">
-                <a href="404.html" class="active" data-target="tab-orders"><span class="material-symbols-outlined" style="vertical-align: middle;">inventory_2</span> Orders</a>
+                <a href="404.html"  data-target="tab-orders"><span class="material-symbols-outlined" style="vertical-align: middle;">inventory_2</span> Orders</a>
                 <a href="404.html" data-target="tab-saved"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span> Saved Pieces</a>
                 <a href="404.html" data-target="tab-profile"><span class="material-symbols-outlined" style="vertical-align: middle;">person</span> Profile</a>
                 <a href="404.html" data-target="tab-settings"><span class="material-symbols-outlined" style="vertical-align: middle;">settings</span> Settings</a>
                 <a href="signin.html" style="margin-top: 1rem; color: #ef4444;"><span class="material-symbols-outlined" style="vertical-align: middle;">logout</span> Sign Out</a>
-                <a href="signin.html" class="mobile-only">LOGIN</a>
 </nav>
 
             <div class="role-badge">
                 <span>ACCOUNT TYPE</span>
                 <span>Customer</span>
+                <span class="user-email" style="display: block; font-size: 0.8rem; margin-top: 0.25rem; color: var(--text-gray); font-weight: 400; text-transform: lowercase; font-family: 'Inter', sans-serif;">customer@stackly.com</span>
             </div>
         </aside>
 
@@ -38,7 +51,7 @@
             <div class="dashboard-header">
                 <div>
                     <span class="sub-heading">WELCOME BACK</span>
-                    <h1 class="serif-heading">Ida Sørensen</h1>
+                    <h1 class="serif-heading">Ida SÃ¸rensen</h1>
                 </div>
             </div>
 
@@ -60,7 +73,7 @@
 
                 <div style="margin-bottom: 2rem;">
                     <h2 class="serif-heading" style="margin-bottom: 1.5rem; font-size: 1.75rem;">Recent Orders</h2>
-                    <table class="dashboard-table">
+                    <div class="table-container">`n<table class="dashboard-table">
                         <thead>
                             <tr>
                                 <th>Order ID</th>
@@ -93,7 +106,7 @@
                                 <td><span class="status-badge delivered">Delivered</span></td>
                             </tr>
                         </tbody>
-                    </table>
+                    </table>`n</div>
                 </div>
             </div>
 
@@ -102,7 +115,7 @@
                 
                 <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-dark);">Available Now</h3>
                 <div class="product-grid" style="grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 3rem;">
-                    <div class="product-card">
+                    <div class="product-card" data-aos="fade-up">
                         <div class="product-image">
                             <span class="badge" style="background: white; color: var(--text-dark);">ATELIER</span>
                             <button class="wishlist-btn active" style="right: 1rem; top: 1rem;"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">favorite</span></button>
@@ -117,7 +130,7 @@
                         </div>
                     </div>
                     
-                    <div class="product-card">
+                    <div class="product-card" data-aos="fade-up">
                         <div class="product-image">
                             <button class="wishlist-btn active" style="right: 1rem; top: 1rem;"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">favorite</span></button>
                             <img src="assets/cardigan.webp" alt="Olive Knit Cardigan">
@@ -134,7 +147,7 @@
 
                 <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-dark);">Out of Stock</h3>
                 <div class="product-grid" style="grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                    <div class="product-card" style="opacity: 0.6;">
+                    <div class="product-card" data-aos="fade-up" style="opacity: 0.6;">
                         <div class="product-image">
                             <button class="wishlist-btn active" style="right: 1rem; top: 1rem;"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">favorite</span></button>
                             <img src="assets/classic_trench_coat.webp" alt="Classic Trench Coat">
@@ -160,7 +173,7 @@
                         <form>
                             <div class="input-group" style="margin-bottom: 1.5rem;">
                                 <label style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--text-gray); display: block; margin-bottom: 0.5rem;">FULL NAME</label>
-                                <input type="text" value="Ida Sørensen" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
+                                <input type="text" value="Ida SÃ¸rensen" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
                             </div>
                             <div class="input-group" style="margin-bottom: 1.5rem;">
                                 <label style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--text-gray); display: block; margin-bottom: 0.5rem;">EMAIL ADDRESS</label>
@@ -170,7 +183,7 @@
                                 <label style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--text-gray); display: block; margin-bottom: 0.5rem;">PHONE NUMBER</label>
                                 <input type="tel" value="+45 12 34 56 78" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
                             </div>
-                            <button type="button" class="auth-submit-btn" style="width: auto; padding: 0.875rem 2rem;">SAVE CHANGES</button>
+                            <button type="button" class="auth-submit-btn" style="width: auto; padding: 0.875rem 2rem;" onclick="window.location.href='404.html'">SAVE CHANGES</button>
                         </form>
                     </div>
 
@@ -182,8 +195,8 @@
                             <span style="position: absolute; top: 1.5rem; right: 1.5rem; background: #f3ede6; color: var(--text-dark); font-size: 0.7rem; font-weight: 600; padding: 0.25rem 0.5rem; border-radius: 4px; letter-spacing: 0.05em;">DEFAULT</span>
                             <p style="font-weight: 600; margin-bottom: 0.75rem;">Home</p>
                             <p style="color: var(--text-gray); font-size: 0.95rem; line-height: 1.6;">
-                                Ida Sørensen<br>
-                                Nørrebrogade 12<br>
+                                Ida SÃ¸rensen<br>
+                                NÃ¸rrebrogade 12<br>
                                 2200 Copenhagen N<br>
                                 Denmark
                             </p>
@@ -193,7 +206,7 @@
                             </div>
                         </div>
                         
-                        <button style="width: 100%; padding: 1.25rem; border: 1px dashed var(--border-color); background: none; color: var(--text-dark); font-weight: 600; cursor: pointer; border-radius: 4px; font-family: inherit; transition: all 0.2s ease;" onmouseover="this.style.background='#fafafa'" onmouseout="this.style.background='none'">
+                        <button style="width: 100%; padding: 1.25rem; border: 1px dashed var(--border-color); background: none; color: var(--text-dark); font-weight: 600; cursor: pointer; border-radius: 4px; font-family: inherit; transition: all 0.2s ease;" onmouseover="this.style.background='#fafafa'" onmouseout="this.style.background='none'" onclick="window.location.href='404.html'">
                             <span class="material-symbols-outlined" style="margin-right: 0.5rem; vertical-align: middle;">add</span> ADD NEW ADDRESS
                         </button>
                     </div>
@@ -232,7 +245,7 @@
                                 <p style="color: var(--text-gray); font-size: 0.85rem; margin-top: 0.25rem; margin-left: 2rem;">Weekly curations, interviews, and styling tips.</p>
                             </div>
                             
-                            <button type="button" class="auth-submit-btn" style="width: auto; padding: 0.875rem 2rem;">SAVE PREFERENCES</button>
+                            <button type="button" class="auth-submit-btn" style="width: auto; padding: 0.875rem 2rem;" onclick="window.location.href='404.html'">SAVE PREFERENCES</button>
                         </form>
                     </div>
 
@@ -242,17 +255,17 @@
                         <form>
                             <div class="input-group" style="margin-bottom: 1.5rem;">
                                 <label style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--text-gray); display: block; margin-bottom: 0.5rem;">CURRENT PASSWORD</label>
-                                <input type="password" placeholder="••••••••" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
+                                <input type="password" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
                             </div>
                             <div class="input-group" style="margin-bottom: 1.5rem;">
                                 <label style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--text-gray); display: block; margin-bottom: 0.5rem;">NEW PASSWORD</label>
-                                <input type="password" placeholder="••••••••" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
+                                <input type="password" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
                             </div>
                             <div class="input-group" style="margin-bottom: 2rem;">
                                 <label style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--text-gray); display: block; margin-bottom: 0.5rem;">CONFIRM NEW PASSWORD</label>
-                                <input type="password" placeholder="••••••••" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
+                                <input type="password" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
                             </div>
-                            <button type="button" class="auth-submit-btn" style="width: auto; padding: 0.875rem 2rem; background: var(--text-dark); color: white;">UPDATE PASSWORD</button>
+                            <button type="button" class="auth-submit-btn" style="width: auto; padding: 0.875rem 2rem; background: var(--text-dark); color: white;" onclick="window.location.href='404.html'">UPDATE PASSWORD</button>
                         </form>
                     </div>
                 </div>
@@ -307,8 +320,10 @@
         }
     });
 </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
+
 
 
 

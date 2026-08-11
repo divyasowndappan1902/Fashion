@@ -10,6 +10,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 <header class="header">
@@ -21,10 +22,10 @@
 <a href="index.html">HOME</a>
 <a href="shop.html">SHOP</a>
 <a href="journal.html">JOURNAL</a>
-<a class="active" href="about.html">ABOUT</a>
+<a  href="about.html" >ABOUT</a>
 <a href="contact.html">CONTACT</a>
     <a href="signin.html" class="mobile-only">LOGIN</a>
-</nav>
+        </nav>
 <div class="header-icons">
 <a class="cart" href="404.html"><span class="material-symbols-outlined" style="vertical-align: middle;">shopping_cart</span> (1)</a>
 <a class="user" href="signin.html"><span class="material-symbols-outlined" style="vertical-align: middle;">person</span></a>
@@ -110,8 +111,8 @@
     </div>
 </div>
 <div class="journal-grid">
-    <div class="journal-card" style="border: none; background: transparent;">
-        <div class="journal-card-img-wrapper"><img alt="Our Ateliers" src="assets/about_ateliers.jpg"/></div>
+    <div class="journal-card" data-aos="fade-up" style="border: none; background: transparent;">
+        <div class="journal-card-img-wrapper"><img alt="Our Ateliers" src="assets/about_ateliers.webp"/></div>
         <div class="journal-info" style="padding: 0;">
             <span class="journal-meta">BEHIND THE SCENES</span>
             <h3 class="serif-heading" style="font-weight: 400; margin-bottom: 1rem;">Our Ateliers</h3>
@@ -119,8 +120,8 @@
             <a href="404.html" class="read-more-btn">Read More</a>
         </div>
     </div>
-    <div class="journal-card" style="border: none; background: transparent;">
-        <div class="journal-card-img-wrapper"><img alt="Sustainability Report" src="assets/about_sustainability.jpg"/></div>
+    <div class="journal-card" data-aos="fade-up" style="border: none; background: transparent;">
+        <div class="journal-card-img-wrapper"><img alt="Sustainability Report" src="assets/about_sustainability.webp"/></div>
         <div class="journal-info" style="padding: 0;">
             <span class="journal-meta">ENVIRONMENT</span>
             <h3 class="serif-heading" style="font-weight: 400; margin-bottom: 1rem;">Sustainability Report</h3>
@@ -128,8 +129,8 @@
             <a href="404.html" class="read-more-btn">Read More</a>
         </div>
     </div>
-    <div class="journal-card" style="border: none; background: transparent;">
-        <div class="journal-card-img-wrapper"><img alt="Meet the Team" src="assets/about_team.jpg"/></div>
+    <div class="journal-card" data-aos="fade-up" style="border: none; background: transparent;">
+        <div class="journal-card-img-wrapper"><img alt="Meet the Team" src="assets/about_team.webp"/></div>
         <div class="journal-info" style="padding: 0;">
             <span class="journal-meta">PEOPLE</span>
             <h3 class="serif-heading" style="font-weight: 400; margin-bottom: 1rem;">Meet the Team</h3>
@@ -137,8 +138,8 @@
             <a href="404.html" class="read-more-btn">Read More</a>
         </div>
     </div>
-    <div class="journal-card" style="border: none; background: transparent;">
-        <div class="journal-card-img-wrapper"><img alt="The Stackly Archive" src="assets/about_archive.jpg"/></div>
+    <div class="journal-card" data-aos="fade-up" style="border: none; background: transparent;">
+        <div class="journal-card-img-wrapper"><img alt="The Stackly Archive" src="assets/about_archive.webp"/></div>
         <div class="journal-info" style="padding: 0;">
             <span class="journal-meta">HISTORY</span>
             <h3 class="serif-heading" style="font-weight: 400; margin-bottom: 1rem;">The Archive</h3>
@@ -146,8 +147,8 @@
             <a href="404.html" class="read-more-btn">Read More</a>
         </div>
     </div>
-    <div class="journal-card" style="border: none; background: transparent;">
-        <div class="journal-card-img-wrapper"><img alt="Care Guide" src="assets/about_care.jpg"/></div>
+    <div class="journal-card" data-aos="fade-up" style="border: none; background: transparent;">
+        <div class="journal-card-img-wrapper"><img alt="Care Guide" src="assets/about_care.webp"/></div>
         <div class="journal-info" style="padding: 0;">
             <span class="journal-meta">MAINTENANCE</span>
             <h3 class="serif-heading" style="font-weight: 400; margin-bottom: 1rem;">Care Guide</h3>
@@ -155,8 +156,8 @@
             <a href="404.html" class="read-more-btn">Read More</a>
         </div>
     </div>
-    <div class="journal-card" style="border: none; background: transparent;">
-        <div class="journal-card-img-wrapper"><img alt="Press & Media" src="assets/about_press.jpg"/></div>
+    <div class="journal-card" data-aos="fade-up" style="border: none; background: transparent;">
+        <div class="journal-card-img-wrapper"><img alt="Press & Media" src="assets/about_press.webp"/></div>
         <div class="journal-info" style="padding: 0;">
             <span class="journal-meta">MEDIA</span>
             <h3 class="serif-heading" style="font-weight: 400; margin-bottom: 1rem;">Press & Media</h3>
@@ -167,7 +168,7 @@
 </div>
 </section>
 </main>
-<footer class="footer">
+<footer data-aos="fade-up" class="footer">
     <div class="footer-grid">
         <div class="footer-brand">
             <div class="logo">
@@ -226,8 +227,10 @@
         }
     });
 </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
+
 
 
 
