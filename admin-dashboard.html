@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -10,7 +10,7 @@
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
     <!-- FontAwesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" rel="stylesheet" />
 </head>
 <body>
     <div class="dashboard-layout">
@@ -20,14 +20,15 @@
             </a>
             
             <nav class="sidebar-nav">
-                <a href="#" class="active" data-target="tab-overview"><i class="fa-solid fa-chart-line"></i> Overview</a>
-                <a href="#" data-target="tab-orders"><i class="fa-solid fa-cart-flatbed"></i> Orders</a>
-                <a href="#" data-target="tab-inventory"><i class="fa-solid fa-boxes-stacked"></i> Inventory</a>
-                <a href="#" data-target="tab-customers"><i class="fa-solid fa-users"></i> Customers</a>
-                <a href="#" data-target="tab-analytics"><i class="fa-solid fa-chart-pie"></i> Analytics</a>
-                <a href="#" data-target="tab-settings"><i class="fa-solid fa-gear"></i> Settings</a>
-                <a href="signin.html" style="margin-top: 1rem; color: #ef4444;"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out</a>
-            </nav>
+                <a href="404.html" class="active" data-target="tab-overview"><span class="material-symbols-outlined" style="vertical-align: middle;">show_chart</span> Overview</a>
+                <a href="404.html" data-target="tab-orders"><span class="material-symbols-outlined" style="vertical-align: middle;">local_shipping</span> Orders</a>
+                <a href="404.html" data-target="tab-inventory"><span class="material-symbols-outlined" style="vertical-align: middle;">inventory</span> Inventory</a>
+                <a href="404.html" data-target="tab-customers"><span class="material-symbols-outlined" style="vertical-align: middle;">group</span> Customers</a>
+                <a href="404.html" data-target="tab-analytics"><span class="material-symbols-outlined" style="vertical-align: middle;">pie_chart</span> Analytics</a>
+                <a href="404.html" data-target="tab-settings"><span class="material-symbols-outlined" style="vertical-align: middle;">settings</span> Settings</a>
+                <a href="signin.html" style="margin-top: 1rem; color: #ef4444;"><span class="material-symbols-outlined" style="vertical-align: middle;">logout</span> Sign Out</a>
+                <a href="signin.html" class="mobile-only">LOGIN</a>
+</nav>
 
             <div class="role-badge">
                 <span>ACCOUNT TYPE</span>
@@ -108,7 +109,7 @@
             <div id="tab-orders" class="dashboard-section" style="display: none;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
                     <h2 class="serif-heading" style="font-size: 1.75rem;">Orders Management</h2>
-                    <button class="auth-submit-btn" style="width: auto; padding: 0.6rem 1.25rem; font-size: 0.85rem; background: white; color: var(--text-dark); border: 1px solid var(--border-color);"><i class="fa-solid fa-download" style="margin-right: 0.5rem;"></i> EXPORT CSV</button>
+                    <button class="auth-submit-btn" style="width: auto; padding: 0.6rem 1.25rem; font-size: 0.85rem; background: white; color: var(--text-dark); border: 1px solid var(--border-color);"><span class="material-symbols-outlined" style="margin-right: 0.5rem; vertical-align: middle;">download</span> EXPORT CSV</button>
                 </div>
                 
                 <!-- Section 1: Order Status -->
@@ -118,17 +119,17 @@
                         <div>
                             <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">UNFULFILLED</p>
                             <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">18</p>
-                            <p style="color: #f59e0b; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-clock"></i> Action required</p>
+                            <p style="color: #f59e0b; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><span class="material-symbols-outlined" style="vertical-align: middle;">schedule</span> Action required</p>
                         </div>
                         <div>
                             <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">SHIPPED (30D)</p>
                             <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">142</p>
-                            <p style="color: #10b981; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-truck"></i> On track</p>
+                            <p style="color: #10b981; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><span class="material-symbols-outlined" style="vertical-align: middle;">local_shipping</span> On track</p>
                         </div>
                         <div>
                             <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">RETURNS</p>
                             <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">4</p>
-                            <p style="color: #ef4444; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-arrow-rotate-left"></i> Pending inspection</p>
+                            <p style="color: #ef4444; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><span class="material-symbols-outlined" style="vertical-align: middle;">history</span> Pending inspection</p>
                         </div>
                     </div>
                 </div>
@@ -200,7 +201,7 @@
             <div id="tab-inventory" class="dashboard-section" style="display: none;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
                     <h2 class="serif-heading" style="font-size: 1.75rem;">Inventory Management</h2>
-                    <button class="auth-submit-btn" style="width: auto; padding: 0.6rem 1.25rem; font-size: 0.85rem;"><i class="fa-solid fa-plus" style="margin-right: 0.5rem;"></i> ADD PRODUCT</button>
+                    <button class="auth-submit-btn" style="width: auto; padding: 0.6rem 1.25rem; font-size: 0.85rem;"><span class="material-symbols-outlined" style="margin-right: 0.5rem; vertical-align: middle;">add</span> ADD PRODUCT</button>
                 </div>
                 
                 <!-- Section 1: Inventory Status -->
@@ -215,12 +216,12 @@
                         <div>
                             <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">LOW STOCK</p>
                             <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">12</p>
-                            <p style="color: #f59e0b; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-triangle-exclamation"></i> Below 5 units</p>
+                            <p style="color: #f59e0b; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">warning</span> Below 5 units</p>
                         </div>
                         <div>
                             <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">OUT OF STOCK</p>
                             <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">3</p>
-                            <p style="color: #ef4444; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-circle-xmark"></i> Requires restock</p>
+                            <p style="color: #ef4444; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">cancel</span> Requires restock</p>
                         </div>
                     </div>
                 </div>
@@ -307,7 +308,7 @@
             <div id="tab-customers" class="dashboard-section" style="display: none;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
                     <h2 class="serif-heading" style="font-size: 1.75rem;">Customers</h2>
-                    <button class="auth-submit-btn" style="width: auto; padding: 0.6rem 1.25rem; font-size: 0.85rem;"><i class="fa-solid fa-plus" style="margin-right: 0.5rem;"></i> ADD CUSTOMER</button>
+                    <button class="auth-submit-btn" style="width: auto; padding: 0.6rem 1.25rem; font-size: 0.85rem;"><span class="material-symbols-outlined" style="margin-right: 0.5rem; vertical-align: middle;">add</span> ADD CUSTOMER</button>
                 </div>
                 
                 <!-- Section 1: Customer Metrics -->
@@ -317,12 +318,12 @@
                         <div>
                             <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">TOTAL CUSTOMERS</p>
                             <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">8,432</p>
-                            <p style="color: #10b981; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-arrow-trend-up"></i> +42 this week</p>
+                            <p style="color: #10b981; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><span class="material-symbols-outlined" style="vertical-align: middle;">trending_up</span> +42 this week</p>
                         </div>
                         <div>
                             <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">REPEAT CUSTOMER RATE</p>
                             <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">34.8%</p>
-                            <p style="color: #10b981; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-arrow-trend-up"></i> +1.2% this month</p>
+                            <p style="color: #10b981; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><span class="material-symbols-outlined" style="vertical-align: middle;">trending_up</span> +1.2% this month</p>
                         </div>
                         <div>
                             <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">AVERAGE LIFETIME VALUE</p>
@@ -337,7 +338,7 @@
                     <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color);">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">
                             <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--text-dark);">Recent Customers</h3>
-                            <a href="#" style="font-size: 0.85rem; font-weight: 600; text-decoration: underline;">View All</a>
+                            <a href="404.html" style="font-size: 0.85rem; font-weight: 600; text-decoration: underline;">View All</a>
                         </div>
                         
                         <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
@@ -418,17 +419,17 @@
                         <div>
                             <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">STORE SESSIONS</p>
                             <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">24,592</p>
-                            <p style="color: #10b981; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-arrow-trend-up"></i> +12.5% vs previous 30 days</p>
+                            <p style="color: #10b981; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><span class="material-symbols-outlined" style="vertical-align: middle;">trending_up</span> +12.5% vs previous 30 days</p>
                         </div>
                         <div>
                             <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">CONVERSION RATE</p>
                             <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">3.2%</p>
-                            <p style="color: #10b981; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-arrow-trend-up"></i> +0.4% vs previous 30 days</p>
+                            <p style="color: #10b981; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><span class="material-symbols-outlined" style="vertical-align: middle;">trending_up</span> +0.4% vs previous 30 days</p>
                         </div>
                         <div>
                             <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">AVERAGE ORDER VALUE</p>
                             <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">$185.00</p>
-                            <p style="color: #ef4444; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-arrow-trend-down"></i> -2.1% vs previous 30 days</p>
+                            <p style="color: #ef4444; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><span class="material-symbols-outlined" style="vertical-align: middle;">trending_down</span> -2.1% vs previous 30 days</p>
                         </div>
                     </div>
                 </div>
@@ -567,7 +568,7 @@
                         </div>
                         
                         <button style="width: 100%; padding: 1.25rem; border: 1px dashed var(--border-color); background: none; color: var(--text-dark); font-weight: 600; cursor: pointer; border-radius: 4px; font-family: inherit; transition: all 0.2s ease;" onmouseover="this.style.background='#fafafa'" onmouseout="this.style.background='none'">
-                            <i class="fa-solid fa-user-plus" style="margin-right: 0.5rem;"></i> INVITE STAFF
+                            <span class="material-symbols-outlined" style="margin-right: 0.5rem; vertical-align: middle;">person_add</span> INVITE STAFF
                         </button>
                     </div>
                 </div>
@@ -601,6 +602,32 @@
     </script>
         </main>
     </div>
+
+<script src="scripts.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.nav-links');
+        if(toggle && nav) {
+            toggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                document.body.classList.toggle('no-scroll');
+                const icon = toggle.querySelector('span');
+                if (nav.classList.contains('active')) {
+                    icon.textContent = 'close';
+                } else {
+                    icon.textContent = 'menu';
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>
+
+
+
+
+
 

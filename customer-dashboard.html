@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -10,7 +10,7 @@
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
     <!-- FontAwesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" rel="stylesheet" />
 </head>
 <body>
     <div class="dashboard-layout">
@@ -20,12 +20,13 @@
             </a>
             
             <nav class="sidebar-nav">
-                <a href="#" class="active" data-target="tab-orders"><i class="fa-solid fa-box-open"></i> Orders</a>
-                <a href="#" data-target="tab-saved"><i class="fa-regular fa-heart"></i> Saved Pieces</a>
-                <a href="#" data-target="tab-profile"><i class="fa-regular fa-user"></i> Profile</a>
-                <a href="#" data-target="tab-settings"><i class="fa-solid fa-gear"></i> Settings</a>
-                <a href="signin.html" style="margin-top: 1rem; color: #ef4444;"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out</a>
-            </nav>
+                <a href="404.html" class="active" data-target="tab-orders"><span class="material-symbols-outlined" style="vertical-align: middle;">inventory_2</span> Orders</a>
+                <a href="404.html" data-target="tab-saved"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span> Saved Pieces</a>
+                <a href="404.html" data-target="tab-profile"><span class="material-symbols-outlined" style="vertical-align: middle;">person</span> Profile</a>
+                <a href="404.html" data-target="tab-settings"><span class="material-symbols-outlined" style="vertical-align: middle;">settings</span> Settings</a>
+                <a href="signin.html" style="margin-top: 1rem; color: #ef4444;"><span class="material-symbols-outlined" style="vertical-align: middle;">logout</span> Sign Out</a>
+                <a href="signin.html" class="mobile-only">LOGIN</a>
+</nav>
 
             <div class="role-badge">
                 <span>ACCOUNT TYPE</span>
@@ -104,7 +105,7 @@
                     <div class="product-card">
                         <div class="product-image">
                             <span class="badge" style="background: white; color: var(--text-dark);">ATELIER</span>
-                            <button class="wishlist-btn active" style="right: 1rem; top: 1rem;"><i class="fa-solid fa-heart"></i></button>
+                            <button class="wishlist-btn active" style="right: 1rem; top: 1rem;"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">favorite</span></button>
                             <img src="assets/belted_cotton_coat.webp" alt="Sand Linen Coat">
                         </div>
                         <div class="product-info">
@@ -118,7 +119,7 @@
                     
                     <div class="product-card">
                         <div class="product-image">
-                            <button class="wishlist-btn active" style="right: 1rem; top: 1rem;"><i class="fa-solid fa-heart"></i></button>
+                            <button class="wishlist-btn active" style="right: 1rem; top: 1rem;"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">favorite</span></button>
                             <img src="assets/cardigan.webp" alt="Olive Knit Cardigan">
                         </div>
                         <div class="product-info">
@@ -135,7 +136,7 @@
                 <div class="product-grid" style="grid-template-columns: repeat(3, 1fr); gap: 2rem;">
                     <div class="product-card" style="opacity: 0.6;">
                         <div class="product-image">
-                            <button class="wishlist-btn active" style="right: 1rem; top: 1rem;"><i class="fa-solid fa-heart"></i></button>
+                            <button class="wishlist-btn active" style="right: 1rem; top: 1rem;"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">favorite</span></button>
                             <img src="assets/classic_trench_coat.webp" alt="Classic Trench Coat">
                         </div>
                         <div class="product-info">
@@ -193,7 +194,7 @@
                         </div>
                         
                         <button style="width: 100%; padding: 1.25rem; border: 1px dashed var(--border-color); background: none; color: var(--text-dark); font-weight: 600; cursor: pointer; border-radius: 4px; font-family: inherit; transition: all 0.2s ease;" onmouseover="this.style.background='#fafafa'" onmouseout="this.style.background='none'">
-                            <i class="fa-solid fa-plus" style="margin-right: 0.5rem;"></i> ADD NEW ADDRESS
+                            <span class="material-symbols-outlined" style="margin-right: 0.5rem; vertical-align: middle;">add</span> ADD NEW ADDRESS
                         </button>
                     </div>
                 </div>
@@ -285,6 +286,32 @@
     </script>
         </main>
     </div>
+
+<script src="scripts.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.nav-links');
+        if(toggle && nav) {
+            toggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                document.body.classList.toggle('no-scroll');
+                const icon = toggle.querySelector('span');
+                if (nav.classList.contains('active')) {
+                    icon.textContent = 'close';
+                } else {
+                    icon.textContent = 'menu';
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>
+
+
+
+
+
 

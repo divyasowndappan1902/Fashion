@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,24 +8,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" rel="stylesheet" />
 </head>
 <body>
     <header class="header">
         <div class="logo">
             <img src="assets/logo_0174.webp" alt="STACKLY Logo" class="logo-img" />
         </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" style="display: none; background: none; border: none; cursor: pointer; color: var(--text-dark);"><span class="material-symbols-outlined" style="font-size: 1.5rem;">menu</span></button>
         <nav class="nav-links">
             <a href="index.html">HOME</a>
             <a href="shop.html" class="active">SHOP</a>
             <a href="journal.html">JOURNAL</a>
             <a href="about.html">ABOUT</a>
             <a href="contact.html">CONTACT</a>
-        </nav>
+            <a href="signin.html" class="mobile-only">LOGIN</a>
+</nav>
         <div class="header-icons">
-            <a href="cart.html" class="cart"><i class="fa-solid fa-cart-shopping"></i> (1)</a>
-            <a href="signin.html" class="user"><i class="fa-regular fa-user"></i></a>
-            <a href="#" class="search"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="cart.html" class="cart"><span class="material-symbols-outlined" style="vertical-align: middle;">shopping_cart</span> (1)</a>
+            <a href="signin.html" class="user"><span class="material-symbols-outlined" style="vertical-align: middle;">person</span></a>
+            <a href="404.html" class="search"><span class="material-symbols-outlined" style="vertical-align: middle;">search</span></a>
         </div>
     </header>
 
@@ -42,7 +44,7 @@
                 <h1 class="pdp-title">Olive Knit Cardigan</h1>
                 <div class="pdp-reviews-summary">
                     <div class="stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
                     </div>
                     <span>4.9 - 2 reviews</span>
                 </div>
@@ -63,30 +65,30 @@
 
                 <span class="pdp-options-label">QUANTITY</span>
                 <div class="pdp-quantity">
-                    <button class="pdp-quantity-btn"><i class="fa-solid fa-minus" style="font-size: 0.7rem;"></i></button>
+                    <button class="pdp-quantity-btn"><span class="material-symbols-outlined" style="font-size: 0.7rem; vertical-align: middle;">remove</span></button>
                     <input type="text" value="1" class="pdp-quantity-input" readonly>
-                    <button class="pdp-quantity-btn"><i class="fa-solid fa-plus" style="font-size: 0.7rem;"></i></button>
+                    <button class="pdp-quantity-btn"><span class="material-symbols-outlined" style="font-size: 0.7rem; vertical-align: middle;">add</span></button>
                 </div>
 
                 <div class="pdp-actions">
-                    <button class="pdp-btn-add">ADD TO BAG - $145</button>
-                    <button class="pdp-btn-fav"><i class="fa-regular fa-heart"></i> FAV</button>
-                    <button class="pdp-btn-view">VIEW BAG</button>
+                    <button class="pdp-btn-add" onclick="window.location.href='order-confirmation.html';">ADD TO BAG - $145</button>
+                    <button class="pdp-btn-fav" onclick="window.location.href='404.html';"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span> FAV</button>
+                    <button class="pdp-btn-view" onclick="window.location.href='404.html';">VIEW BAG</button>
                 </div>
 
                 <ul class="pdp-details-list">
-                    <li><i class="fa-solid fa-check" style="color: #4CAF50;"></i> 100% organic cotton knit</li>
-                    <li><i class="fa-solid fa-check" style="color: #4CAF50;"></i> Relaxed fit, drop shoulder</li>
-                    <li><i class="fa-solid fa-check" style="color: #4CAF50;"></i> Horn-look buttons</li>
-                    <li><i class="fa-solid fa-check" style="color: #4CAF50;"></i> Machine wash cold</li>
+                    <li><span class="material-symbols-outlined" style="color: #4CAF50; vertical-align: middle;">check</span> 100% organic cotton knit</li>
+                    <li><span class="material-symbols-outlined" style="color: #4CAF50; vertical-align: middle;">check</span> Relaxed fit, drop shoulder</li>
+                    <li><span class="material-symbols-outlined" style="color: #4CAF50; vertical-align: middle;">check</span> Horn-look buttons</li>
+                    <li><span class="material-symbols-outlined" style="color: #4CAF50; vertical-align: middle;">check</span> Machine wash cold</li>
                 </ul>
 
                 <div class="pdp-guarantees">
                     <div class="pdp-guarantee-item">
-                        <i class="fa-solid fa-truck-fast"></i> Free shipping over $150
+                        <span class="material-symbols-outlined" style="vertical-align: middle;">local_shipping</span> Free shipping over $150
                     </div>
                     <div class="pdp-guarantee-item">
-                        <i class="fa-solid fa-arrow-rotate-left"></i> 30-day returns
+                        <span class="material-symbols-outlined" style="vertical-align: middle;">history</span> 30-day returns
                     </div>
                 </div>
             </div>
@@ -98,14 +100,14 @@
                 <span class="pdp-options-label">REVIEWS</span>
                 <div class="pdp-review-score">4.9</div>
                 <div class="pdp-review-stars">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
                 </div>
                 <div class="pdp-review-based">Based on 2 verified purchases</div>
             </div>
             <div class="pdp-reviews-right">
                 <div class="pdp-review-item">
                     <div class="pdp-review-header">
-                        <div class="pdp-review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <div class="pdp-review-stars"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span></div>
                         <div class="pdp-review-date">MARCH 12, 2026</div>
                     </div>
                     <h4 class="pdp-review-title">Better in person</h4>
@@ -114,7 +116,7 @@
                 </div>
                 <div class="pdp-review-item">
                     <div class="pdp-review-header">
-                        <div class="pdp-review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+                        <div class="pdp-review-stars"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span></div>
                         <div class="pdp-review-date">FEBRUARY 2, 2026</div>
                     </div>
                     <h4 class="pdp-review-title">Quietly perfect</h4>
@@ -131,7 +133,7 @@
                 <!-- Product 1 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
                         <img src="assets/casual_shirt.webp" alt="Ivory Oversized Shirt">
                     </div>
                     <div class="product-info">
@@ -140,14 +142,14 @@
                             <span class="product-price">$98</span>
                         </div>
                         <span class="product-category">ESSENTIALS</span>
-                        <div class="pdp-review-stars" style="margin-top: 0.5rem; font-size: 0.7rem;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> <span style="color:var(--text-gray); margin-left:4px;">(132)</span></div>
+                        <div class="pdp-review-stars" style="margin-top: 0.5rem; font-size: 0.7rem;"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span> <span style="color:var(--text-gray); margin-left:4px;">(132)</span></div>
                     </div>
                 </div>
                 <!-- Product 2 -->
                 <div class="product-card">
                     <div class="product-image">
                         <span class="badge">BESTSELLER</span>
-                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
                         <img src="assets/wide_leg_linen_trousers.jpg" alt="Linen Wide-Leg Trouser">
                     </div>
                     <div class="product-info">
@@ -156,13 +158,13 @@
                             <span class="product-price">$165</span>
                         </div>
                         <span class="product-category">WOMEN'S WEAR</span>
-                        <div class="pdp-review-stars" style="margin-top: 0.5rem; font-size: 0.7rem;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:var(--text-gray); margin-left:4px;">(432)</span></div>
+                        <div class="pdp-review-stars" style="margin-top: 0.5rem; font-size: 0.7rem;"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span> <span style="color:var(--text-gray); margin-left:4px;">(432)</span></div>
                     </div>
                 </div>
                 <!-- Product 3 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
                         <img src="assets/sneaker.webp" alt="Low-Top Leather Sneaker">
                     </div>
                     <div class="product-info">
@@ -171,7 +173,7 @@
                             <span class="product-price">$195</span>
                         </div>
                         <span class="product-category">ESSENTIALS</span>
-                        <div class="pdp-review-stars" style="margin-top: 0.5rem; font-size: 0.7rem;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> <span style="color:var(--text-gray); margin-left:4px;">(92)</span></div>
+                        <div class="pdp-review-stars" style="margin-top: 0.5rem; font-size: 0.7rem;"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span> <span style="color:var(--text-gray); margin-left:4px;">(92)</span></div>
                     </div>
                 </div>
             </div>
@@ -180,43 +182,67 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <div class="logo">
-                    <img src="assets/logo_0174.webp" alt="STACKLY Logo" class="logo-img" />
-                </div>
-                <p>Premium looks, everyday comfort and honest prices &mdash; made in small runs.</p>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <div class="logo">
+                <img src="assets/logo_0174.webp" alt="STACKLY Logo" class="logo-img" />
             </div>
-            <div class="footer-links">
-                <h4>SHOP</h4>
-                <ul>
-                    <li><a href="#">New arrivals</a></li>
-                    <li><a href="#">Men's wear</a></li>
-                    <li><a href="#">Women's wear</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>COMPANY</h4>
-                <ul>
-                    <li><a href="#">Our journey</a></li>
-                    <li><a href="#">Journal</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Account</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>FOLLOW</h4>
-                <ul>
-                    <li><a href="#">Instagram &mdash; @stackly.studio</a></li>
-                    <li><a href="#">Pinterest &mdash; @stackly</a></li>
-                    <li><a href="#">hello@stackly.com</a></li>
-                </ul>
-            </div>
+            <p>Premium looks, everyday comfort and honest pricing—made for real life.</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Stackly. All rights reserved.</p>
-            <p>Crafted for everyday</p>
+        <div class="footer-links">
+            <h4>SHOP</h4>
+            <ul>
+                <li><a href="404.html">New arrivals</a></li>
+                <li><a href="404.html">Men's wear</a></li>
+                <li><a href="404.html">Women's wear</a></li>
+            </ul>
         </div>
-    </footer>
+        <div class="footer-links">
+            <h4>COMPANY</h4>
+            <ul>
+                <li><a href="404.html">Our journey</a></li>
+                <li><a href="404.html">Journal</a></li>
+                <li><a href="404.html">Contact</a></li>
+                <li><a href="404.html">Account</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>FOLLOW</h4>
+            <ul>
+                <li><a href="404.html">Instagram — @stackly.studio</a></li>
+                <li><a href="404.html">Pinterest — @stackly</a></li>
+                <li><a href="404.html">hello@stackly.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 Stackly. All rights reserved.</p>
+        <p>Order for surprise</p>
+    </div>
+</footer>
+<script src="scripts.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.nav-links');
+        if(toggle && nav) {
+            toggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                document.body.classList.toggle('no-scroll');
+                const icon = toggle.querySelector('span');
+                if (nav.classList.contains('active')) {
+                    icon.textContent = 'close';
+                } else {
+                    icon.textContent = 'menu';
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>
+
+
+
+

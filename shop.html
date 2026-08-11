@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -8,24 +8,26 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" rel="stylesheet" />
 </head>
 <body>
 <header class="header">
 <div class="logo">
 <img src="assets/logo_0174.webp" alt="STACKLY Logo" class="logo-img" />
 </div>
-<nav class="nav-links">
+<button class="mobile-menu-toggle" aria-label="Toggle menu" style="display: none; background: none; border: none; cursor: pointer; color: var(--text-dark);"><span class="material-symbols-outlined" style="font-size: 1.5rem;">menu</span></button>
+        <nav class="nav-links">
 <a href="index.html">HOME</a>
 <a class="active" href="shop.html">SHOP</a>
 <a href="journal.html">JOURNAL</a>
 <a href="about.html">ABOUT</a>
 <a href="contact.html">CONTACT</a>
+    <a href="signin.html" class="mobile-only">LOGIN</a>
 </nav>
 <div class="header-icons">
-<a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i> (1)</a>
-<a class="user" href="signin.html"><i class="fa-regular fa-user"></i></a>
-<a class="search" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+<a class="cart" href="404.html"><span class="material-symbols-outlined" style="vertical-align: middle;">shopping_cart</span> (1)</a>
+<a class="user" href="signin.html"><span class="material-symbols-outlined" style="vertical-align: middle;">person</span></a>
+<a class="search" href="404.html"><span class="material-symbols-outlined" style="vertical-align: middle;">search</span></a>
 </div>
 </header>
 <main class="shop-page">
@@ -33,25 +35,25 @@
 <span class="sub-heading">COLLECTION</span>
 <h1 class="serif-heading">Everything in the studio</h1>
 <p>30 pieces, restocked in small runs. Filter by category, price, colour and rating.</p>
-<button class="mobile-filter-btn" id="mobileFilterBtn"><i class="fa-solid fa-sliders"></i> Filters</button>
+<button class="mobile-filter-btn" id="mobileFilterBtn"><span class="material-symbols-outlined" style="vertical-align: middle;">tune</span> Filters</button>
 </div>
 <div class="shop-layout">
 <aside class="shop-sidebar">
 <div class="sidebar-header">
-<button class="close-sidebar-btn" id="closeSidebarBtn"><i class="fa-solid fa-xmark"></i></button> <span class="sidebar-title">FILTERS</span>
+<button class="close-sidebar-btn" id="closeSidebarBtn"><span class="material-symbols-outlined" style="vertical-align: middle;">close</span></button> <span class="sidebar-title">FILTERS</span>
 </div>
 <div class="search-box">
-<i class="fa-solid fa-magnifying-glass"></i>
+<span class="material-symbols-outlined" style="vertical-align: middle;">search</span>
 <input placeholder="Search pieces" type="text"/>
 </div>
 <div class="filter-group">
 <h4>CATEGORY</h4>
 <ul>
-<li><a class="active" href="#">All</a></li>
-<li><a href="#">Men's Wear</a></li>
-<li><a href="#">Women's Wear</a></li>
-<li><a href="#">Essentials</a></li>
-<li><a href="#">Accessories</a></li>
+<li><a class="active" href="404.html">All</a></li>
+<li><a href="404.html">Men's Wear</a></li>
+<li><a href="404.html">Women's Wear</a></li>
+<li><a href="404.html">Essentials</a></li>
+<li><a href="404.html">Accessories</a></li>
 </ul>
 </div>
 <div class="filter-group">
@@ -123,7 +125,7 @@
 <div class="product-card" data-category="WOMEN'S WEAR" data-price="350" data-rating="4.5" data-color="SAND" data-size="M" data-name="Silk Bias Slip Dress">
 <div class="product-image">
 <span class="badge">NEW</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Silk Bias Slip Dress" src="assets/slip_dress.webp"/>
 </div>
 <div class="product-info">
@@ -134,17 +136,18 @@
 <span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(43 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 2 -->
 <div class="product-card" data-category="WOMEN'S WEAR" data-price="180" data-rating="4.5" data-color="INK" data-size="XS" data-name="Midi Slip Dress">
 <div class="product-image">
 <span class="badge">ATELIER</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Midi Slip Dress" src="assets/casual_dress.webp"/>
 </div>
 <div class="product-info">
@@ -155,16 +158,17 @@
 <span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(318 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 3 -->
 <div class="product-card" data-category="WOMEN'S WEAR" data-price="710" data-rating="4.5" data-color="NATURAL" data-size="XL" data-name="Satin Evening Dress">
 <div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Satin Evening Dress" src="assets/evening_gown.webp"/>
 </div>
 <div class="product-info">
@@ -175,16 +179,17 @@
 <span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(100 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 4 -->
 <div class="product-card" data-category="MEN'S WEAR" data-price="950" data-rating="4" data-color="INDIGO" data-size="XL" data-name="Ribbed Cotton Vest">
 <div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Ribbed Cotton Vest" src="assets/ribbed_cotton_vest.jpg"/>
 </div>
 <div class="product-info">
@@ -195,16 +200,17 @@
 <span class="product-category">MEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="vertical-align: middle;">star</span>
 </div>
 <span class="rating-score">(273 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 5 -->
 <div class="product-card" data-category="WOMEN'S WEAR" data-price="510" data-rating="4.5" data-color="BUTTER" data-size="XL" data-name="Silk Camisole Top">
 <div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Silk Camisole Top" src="assets/silk_camisole_top.jpg"/>
 </div>
 <div class="product-info">
@@ -215,17 +221,18 @@
 <span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(188 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 6 -->
 <div class="product-card" data-category="MEN'S WEAR" data-price="300" data-rating="4.5" data-color="BONE" data-size="S" data-name="Fine Knit Vest">
 <div class="product-image">
 <span class="badge">NEW</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Fine Knit Vest" src="assets/fine_knit_vest.jpg"/>
 </div>
 <div class="product-info">
@@ -236,16 +243,17 @@
 <span class="product-category">MEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(128 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 7 -->
 <div class="product-card" data-category="MEN'S WEAR" data-price="830" data-rating="4.5" data-color="INK" data-size="M" data-name="Washed Oxford Shirt">
 <div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Washed Oxford Shirt" src="assets/washed_oxford_shirt.jpg"/>
 </div>
 <div class="product-info">
@@ -256,17 +264,18 @@
 <span class="product-category">MEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(122 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 8 -->
 <div class="product-card" data-category="WOMEN'S WEAR" data-price="900" data-rating="4.5" data-color="CHESTNUT" data-size="S" data-name="Oversized Poplin Shirt">
 <div class="product-image">
 <span class="badge">POPULAR</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Oversized Poplin Shirt" src="assets/oversized_poplin_shirt.jpg"/>
 </div>
 <div class="product-info">
@@ -277,16 +286,17 @@
 <span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(50 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 9 -->
 <div class="product-card" data-category="MEN'S WEAR" data-price="750" data-rating="4.5" data-color="NATURAL" data-size="S" data-name="Boxy Fit Oxford Shirt">
 <div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Boxy Fit Oxford Shirt" src="assets/boxy_fit_oxford_shirt.jpg"/>
 </div>
 <div class="product-info">
@@ -297,17 +307,18 @@
 <span class="product-category">MEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(265 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 10 -->
 <div class="product-card" data-category="WOMEN'S WEAR" data-price="540" data-rating="4.5" data-color="IVORY" data-size="S" data-name="Classic Trench Coat">
 <div class="product-image">
 <span class="badge">EXCLUSIVE</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Classic Trench Coat" src="assets/classic_trench_coat.webp"/>
 </div>
 <div class="product-info">
@@ -318,16 +329,17 @@
 <span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(85 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 11 -->
 <div class="product-card" data-category="WOMEN'S WEAR" data-price="530" data-rating="4.5" data-color="OAT" data-size="S" data-name="Double-Breasted Trench">
 <div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Double-Breasted Trench" src="assets/double_breasted_trench.webp"/>
 </div>
 <div class="product-info">
@@ -338,17 +350,18 @@
 <span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(16 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 12 -->
 <div class="product-card" data-category="WOMEN'S WEAR" data-price="530" data-rating="4.5" data-color="INK" data-size="M" data-name="Belted Cotton Coat">
 <div class="product-image">
 <span class="badge">ATELIER</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Belted Cotton Coat" src="assets/belted_cotton_coat.webp"/>
 </div>
 <div class="product-info">
@@ -359,17 +372,18 @@
 <span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(333 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 13 -->
 <div class="product-card" data-category="MEN'S WEAR" data-price="160" data-rating="4.5" data-color="CLAY" data-size="M" data-name="Raw Selvedge Denim">
 <div class="product-image">
 <span class="badge">POPULAR</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Raw Selvedge Denim" src="assets/raw_selvedge_denim.jpg"/>
 </div>
 <div class="product-info">
@@ -380,16 +394,17 @@
 <span class="product-category">MEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(153 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 14 -->
 <div class="product-card" data-category="WOMEN'S WEAR" data-price="120" data-rating="4.5" data-color="OAT" data-size="S" data-name="Wide-Leg Linen Trousers">
 <div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Wide-Leg Linen Trousers" src="assets/wide_leg_linen_trousers.jpg"/>
 </div>
 <div class="product-info">
@@ -400,17 +415,18 @@
 <span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(142 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 15 -->
 <div class="product-card" data-category="WOMEN'S WEAR" data-price="930" data-rating="4.5" data-color="OLIVE" data-size="XS" data-name="High-Rise Straight Jeans">
 <div class="product-image">
 <span class="badge">POPULAR</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="High-Rise Straight Jeans" src="assets/trouser.webp"/>
 </div>
 <div class="product-info">
@@ -421,17 +437,18 @@
 <span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(45 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 16 -->
 <div class="product-card" data-category="MEN'S WEAR" data-price="600" data-rating="4.5" data-color="NATURAL" data-size="L" data-name="Unstructured Linen Blazer">
 <div class="product-image">
 <span class="badge">ATELIER</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Unstructured Linen Blazer" src="assets/unstructured_linen_blazer.webp"/>
 </div>
 <div class="product-info">
@@ -442,17 +459,18 @@
 <span class="product-category">MEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(342 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 17 -->
 <div class="product-card" data-category="WOMEN'S WEAR" data-price="130" data-rating="5" data-color="CAMEL" data-size="M" data-name="Tailored Wool Blazer">
 <div class="product-image">
 <span class="badge">ATELIER</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Tailored Wool Blazer" src="assets/tailored_wool_blazer.webp"/>
 </div>
 <div class="product-info">
@@ -463,17 +481,18 @@
 <span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span>
 </div>
 <span class="rating-score">(27 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 18 -->
 <div class="product-card" data-category="MEN'S WEAR" data-price="980" data-rating="5" data-color="SAND" data-size="XL" data-name="Cashmere Blend Blazer">
 <div class="product-image">
 <span class="badge">EXCLUSIVE</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Cashmere Blend Blazer" src="assets/cashmere_blend_blazer.webp"/>
 </div>
 <div class="product-info">
@@ -484,16 +503,17 @@
 <span class="product-category">MEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span>
 </div>
 <span class="rating-score">(232 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 19 -->
 <div class="product-card" data-category="WOMEN'S WEAR" data-price="110" data-rating="5" data-color="SKY" data-size="XS" data-name="Double-Faced Wool Overcoat">
 <div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Double-Faced Wool Overcoat" src="assets/double_faced_wool_overcoat.webp"/>
 </div>
 <div class="product-info">
@@ -504,17 +524,18 @@
 <span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span>
 </div>
 <span class="rating-score">(62 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 20 -->
 <div class="product-card" data-category="WOMEN'S WEAR" data-price="520" data-rating="4.5" data-color="SKY" data-size="XL" data-name="Structured Wool Coat">
 <div class="product-image">
 <span class="badge">ATELIER</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Structured Wool Coat" src="assets/structured_wool_coat.webp"/>
 </div>
 <div class="product-info">
@@ -525,17 +546,18 @@
 <span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(305 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 21 -->
 <div class="product-card" data-category="MEN'S WEAR" data-price="500" data-rating="4.5" data-color="INK" data-size="L" data-name="Heavy Cashmere Coat">
 <div class="product-image">
 <span class="badge">EXCLUSIVE</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Heavy Cashmere Coat" src="assets/heavy_cashmere_coat.webp"/>
 </div>
 <div class="product-info">
@@ -546,16 +568,17 @@
 <span class="product-category">MEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(63 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 22 -->
 <div class="product-card" data-category="WOMEN'S WEAR" data-price="80" data-rating="4.5" data-color="TORTOISE" data-size="S" data-name="Cropped Cotton Cardigan">
 <div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Cropped Cotton Cardigan" src="assets/cropped_cotton_cardigan.webp"/>
 </div>
 <div class="product-info">
@@ -566,17 +589,18 @@
 <span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(90 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 23 -->
 <div class="product-card" data-category="WOMEN'S WEAR" data-price="740" data-rating="4.5" data-color="INK" data-size="M" data-name="Chunky Knit Cardigan">
 <div class="product-image">
 <span class="badge">NEW</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Chunky Knit Cardigan" src="assets/chunky_knit_cardigan.webp"/>
 </div>
 <div class="product-info">
@@ -587,16 +611,17 @@
 <span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(234 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 24 -->
 <div class="product-card" data-category="MEN'S WEAR" data-price="520" data-rating="4.5" data-color="INK" data-size="XS" data-name="Ribbed Wool Cardigan">
 <div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Ribbed Wool Cardigan" src="assets/ribbed_wool_cardigan.webp"/>
 </div>
 <div class="product-info">
@@ -607,17 +632,18 @@
 <span class="product-category">MEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(29 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 25 -->
 <div class="product-card" data-category="ESSENTIALS" data-price="250" data-rating="4.5" data-color="SKY" data-size="XS" data-name="Classic White Tee">
 <div class="product-image">
 <span class="badge">RESTOCKED</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Classic White Tee" src="assets/classic_white_tee.webp"/>
 </div>
 <div class="product-info">
@@ -628,16 +654,17 @@
 <span class="product-category">ESSENTIALS</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(168 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 26 -->
 <div class="product-card" data-category="MEN'S WEAR" data-price="210" data-rating="4.5" data-color="IVORY" data-size="M" data-name="Heavyweight Cotton Crew">
 <div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Heavyweight Cotton Crew" src="assets/heavyweight_cotton_crew.webp"/>
 </div>
 <div class="product-info">
@@ -648,16 +675,17 @@
 <span class="product-category">MEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(331 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 27 -->
 <div class="product-card" data-category="ESSENTIALS" data-price="770" data-rating="4.5" data-color="BUTTER" data-size="M" data-name="Slub Cotton T-Shirt">
 <div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Slub Cotton T-Shirt" src="assets/slub_cotton_t_shirt.webp"/>
 </div>
 <div class="product-info">
@@ -668,17 +696,18 @@
 <span class="product-category">ESSENTIALS</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(269 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 28 -->
 <div class="product-card" data-category="MEN'S WEAR" data-price="550" data-rating="4.5" data-color="NATURAL" data-size="S" data-name="Performance Active Tee">
 <div class="product-image">
 <span class="badge">NEW</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Performance Active Tee" src="assets/performance_active_tee.webp"/>
 </div>
 <div class="product-info">
@@ -689,16 +718,17 @@
 <span class="product-category">MEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(127 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 29 -->
 <div class="product-card" data-category="ESSENTIALS" data-price="660" data-rating="4" data-color="OAT" data-size="L" data-name="Breathable Cotton Top">
 <div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Breathable Cotton Top" src="assets/breathable_cotton_top.webp"/>
 </div>
 <div class="product-info">
@@ -709,17 +739,18 @@
 <span class="product-category">ESSENTIALS</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="vertical-align: middle;">star</span>
 </div>
 <span class="rating-score">(164 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 <!-- Product 30 -->
 <div class="product-card" data-category="WOMEN'S WEAR" data-price="410" data-rating="4.5" data-color="CHESTNUT" data-size="XL" data-name="Seamless Knit Tee">
 <div class="product-image">
 <span class="badge">POPULAR</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<button class="wishlist-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">favorite</span></button>
 <img alt="Seamless Knit Tee" src="assets/seamless_knit_tee.webp"/>
 </div>
 <div class="product-info">
@@ -730,10 +761,11 @@
 <span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">star_half</span>
 </div>
 <span class="rating-score">(219 likes)</span>
 </div>
+<button class="add-to-cart-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined" style="vertical-align: middle;">add_shopping_cart</span> ADD TO CART</button>
 </div>
 </div>
 </div>
@@ -741,47 +773,71 @@
 </div>
 </main>
 <footer class="footer">
-<div class="footer-grid">
-<div class="footer-brand">
-<div class="logo">
-<img src="assets/logo_0174.webp" alt="STACKLY Logo" class="logo-img" />
-</div>
-<p>Premium looks, everyday comfort and honest prices — made in small runs.</p>
-</div>
-<div class="footer-links">
-<h4>SHOP</h4>
-<ul>
-<li><a href="#">New arrivals</a></li>
-<li><a href="#">Men's wear</a></li>
-<li><a href="#">Women's wear</a></li>
-</ul>
-</div>
-<div class="footer-links">
-<h4>COMPANY</h4>
-<ul>
-<li><a href="#">Our journey</a></li>
-<li><a href="#">Journal</a></li>
-<li><a href="#">Contact</a></li>
-<li><a href="#">Account</a></li>
-</ul>
-</div>
-<div class="footer-links">
-<h4>FOLLOW</h4>
-<ul>
-<li><a href="#">Instagram — @stackly.studio</a></li>
-<li><a href="#">Pinterest — @stackly</a></li>
-<li><a href="#">hello@stackly.com</a></li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom">
-<p>© 2026 Stackly. All rights reserved.</p>
-<p>Crafted for everyday</p>
-</div>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <div class="logo">
+                <img src="assets/logo_0174.webp" alt="STACKLY Logo" class="logo-img" />
+            </div>
+            <p>Premium looks, everyday comfort and honest pricing—made for real life.</p>
+        </div>
+        <div class="footer-links">
+            <h4>SHOP</h4>
+            <ul>
+                <li><a href="404.html">New arrivals</a></li>
+                <li><a href="404.html">Men's wear</a></li>
+                <li><a href="404.html">Women's wear</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>COMPANY</h4>
+            <ul>
+                <li><a href="404.html">Our journey</a></li>
+                <li><a href="404.html">Journal</a></li>
+                <li><a href="404.html">Contact</a></li>
+                <li><a href="404.html">Account</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>FOLLOW</h4>
+            <ul>
+                <li><a href="404.html">Instagram — @stackly.studio</a></li>
+                <li><a href="404.html">Pinterest — @stackly</a></li>
+                <li><a href="404.html">hello@stackly.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 Stackly. All rights reserved.</p>
+        <p>Order for surprise</p>
+    </div>
 </footer>
-<script src="shop.js"></script>
+<script src="scripts.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.nav-links');
+        if(toggle && nav) {
+            toggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                document.body.classList.toggle('no-scroll');
+                const icon = toggle.querySelector('span');
+                if (nav.classList.contains('active')) {
+                    icon.textContent = 'close';
+                } else {
+                    icon.textContent = 'menu';
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>
+
+
+
+
+
 
 
 
