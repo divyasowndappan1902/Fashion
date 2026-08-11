@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -33,12 +32,13 @@
 <div class="shop-header">
 <span class="sub-heading">COLLECTION</span>
 <h1 class="serif-heading">Everything in the studio</h1>
-<p>29 pieces, restocked in small runs. Filter by category, price, colour and rating.</p>
+<p>30 pieces, restocked in small runs. Filter by category, price, colour and rating.</p>
+<button class="mobile-filter-btn" id="mobileFilterBtn"><i class="fa-solid fa-sliders"></i> Filters</button>
 </div>
 <div class="shop-layout">
 <aside class="shop-sidebar">
 <div class="sidebar-header">
-<i class="fa-solid fa-sliders"></i> <span class="sidebar-title">FILTERS</span>
+<button class="close-sidebar-btn" id="closeSidebarBtn"><i class="fa-solid fa-xmark"></i></button> <span class="sidebar-title">FILTERS</span>
 </div>
 <div class="search-box">
 <i class="fa-solid fa-magnifying-glass"></i>
@@ -93,6 +93,10 @@
 <span class="pill">4.9+</span>
 </div>
 </div>
+<div class="filter-group">
+
+</div>
+
 <div class="filter-checkbox">
 <input id="new-featured" type="checkbox"/>
 <label for="new-featured">New &amp; featured only</label>
@@ -101,7 +105,7 @@
 <section class="shop-products">
 <div class="shop-products-header">
 <div class="product-count">
-<span class="sub-heading">29 PIECES</span>
+<span class="sub-heading">30 PIECES</span>
 </div>
 <div class="sort-options">
 <span class="sub-heading">SORT</span>
@@ -116,108 +120,7 @@
 </div>
 <div class="product-grid shop-grid">
 <!-- Product 1 -->
-<div class="product-card">
-<div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Washed Oxford Shirt" src="assets/shirt.webp"/>
-</div>
-<div class="product-info">
-<div class="product-title-row">
-<span class="product-title">Washed Oxford Shirt</span>
-<span class="product-price">$88</span>
-</div>
-<span class="product-category">MEN'S WEAR</span>
-<div class="product-rating">
-<div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-</div>
-<span class="rating-score">4.5 (2)</span>
-</div>
-</div>
-</div>
-<!-- Product 2 -->
-<div class="product-card">
-<div class="product-image">
-<span class="badge">ATELIER</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Unstructured Linen Blazer" src="assets/jacket.webp"/>
-</div>
-<div class="product-info">
-<div class="product-title-row">
-<span class="product-title">Unstructured Linen Blazer</span>
-<span class="product-price">$345</span>
-</div>
-<span class="product-category">MEN'S WEAR</span>
-<div class="product-rating">
-<div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<span class="rating-score">4.9 (3)</span>
-</div>
-</div>
-</div>
-<!-- Product 3 -->
-<div class="product-card">
-<div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Raw Selvedge Denim" src="assets/trouser.webp"/>
-</div>
-<div class="product-info">
-<div class="product-title-row">
-<span class="product-title">Raw Selvedge Denim</span>
-<span class="product-price">$168</span>
-</div>
-<span class="product-category">MEN'S WEAR</span>
-<div class="product-rating">
-<div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-</div>
-<span class="rating-score">4.6 (4)</span>
-</div>
-</div>
-</div>
-<!-- Product 4 -->
-<div class="product-card">
-<div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Ribbed Cotton Vest" src="assets/vest.webp"/>
-</div>
-<div class="product-info">
-<div class="product-title-row">
-<span class="product-title">Ribbed Cotton Vest</span>
-<span class="product-price">$48</span>
-</div>
-<span class="product-category">MEN'S WEAR</span>
-<div class="product-rating">
-<div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<span class="rating-score">4.9 (2)</span>
-</div>
-</div>
-</div>
-<!-- Product 5 -->
-<div class="product-card">
-<div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Double-Faced Wool Overcoat" src="overassets/coat.webp"/>
-</div>
-<div class="product-info">
-<div class="product-title-row">
-<span class="product-title">Double-Faced Wool Overcoat</span>
-<span class="product-price">$465</span>
-</div>
-<span class="product-category">WOMEN'S WEAR</span>
-<div class="product-rating">
-<div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<span class="rating-score">5.0 (5)</span>
-</div>
-</div>
-</div>
-<!-- Product 6 -->
-<div class="product-card">
+<div class="product-card" data-category="WOMEN'S WEAR" data-price="350" data-rating="4.5" data-color="SAND" data-size="M" data-name="Silk Bias Slip Dress">
 <div class="product-image">
 <span class="badge">NEW</span>
 <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
@@ -226,296 +129,610 @@
 <div class="product-info">
 <div class="product-title-row">
 <span class="product-title">Silk Bias Slip Dress</span>
-<span class="product-price">$275</span>
+<span class="product-price">$350</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(43 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="product-card" data-category="WOMEN'S WEAR" data-price="180" data-rating="4.5" data-color="INK" data-size="XS" data-name="Midi Slip Dress">
+<div class="product-image">
+<span class="badge">ATELIER</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Midi Slip Dress" src="assets/casual_dress.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Midi Slip Dress</span>
+<span class="product-price">$180</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(318 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="product-card" data-category="WOMEN'S WEAR" data-price="710" data-rating="4.5" data-color="NATURAL" data-size="XL" data-name="Satin Evening Dress">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Satin Evening Dress" src="assets/evening_gown.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Satin Evening Dress</span>
+<span class="product-price">$710</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(100 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="product-card" data-category="MEN'S WEAR" data-price="950" data-rating="4" data-color="INDIGO" data-size="XL" data-name="Ribbed Cotton Vest">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Ribbed Cotton Vest" src="assets/ribbed_cotton_vest.jpg"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Ribbed Cotton Vest</span>
+<span class="product-price">$950</span>
+</div>
+<span class="product-category">MEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+</div>
+<span class="rating-score">(273 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="product-card" data-category="WOMEN'S WEAR" data-price="510" data-rating="4.5" data-color="BUTTER" data-size="XL" data-name="Silk Camisole Top">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Silk Camisole Top" src="assets/silk_camisole_top.jpg"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Silk Camisole Top</span>
+<span class="product-price">$510</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(188 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="product-card" data-category="MEN'S WEAR" data-price="300" data-rating="4.5" data-color="BONE" data-size="S" data-name="Fine Knit Vest">
+<div class="product-image">
+<span class="badge">NEW</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Fine Knit Vest" src="assets/fine_knit_vest.jpg"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Fine Knit Vest</span>
+<span class="product-price">$300</span>
+</div>
+<span class="product-category">MEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(128 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 7 -->
+<div class="product-card" data-category="MEN'S WEAR" data-price="830" data-rating="4.5" data-color="INK" data-size="M" data-name="Washed Oxford Shirt">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Washed Oxford Shirt" src="assets/washed_oxford_shirt.jpg"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Washed Oxford Shirt</span>
+<span class="product-price">$830</span>
+</div>
+<span class="product-category">MEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(122 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 8 -->
+<div class="product-card" data-category="WOMEN'S WEAR" data-price="900" data-rating="4.5" data-color="CHESTNUT" data-size="S" data-name="Oversized Poplin Shirt">
+<div class="product-image">
+<span class="badge">POPULAR</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Oversized Poplin Shirt" src="assets/oversized_poplin_shirt.jpg"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Oversized Poplin Shirt</span>
+<span class="product-price">$900</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(50 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 9 -->
+<div class="product-card" data-category="MEN'S WEAR" data-price="750" data-rating="4.5" data-color="NATURAL" data-size="S" data-name="Boxy Fit Oxford Shirt">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Boxy Fit Oxford Shirt" src="assets/boxy_fit_oxford_shirt.jpg"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Boxy Fit Oxford Shirt</span>
+<span class="product-price">$750</span>
+</div>
+<span class="product-category">MEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(265 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 10 -->
+<div class="product-card" data-category="WOMEN'S WEAR" data-price="540" data-rating="4.5" data-color="IVORY" data-size="S" data-name="Classic Trench Coat">
+<div class="product-image">
+<span class="badge">EXCLUSIVE</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Classic Trench Coat" src="assets/classic_trench_coat.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Classic Trench Coat</span>
+<span class="product-price">$540</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(85 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 11 -->
+<div class="product-card" data-category="WOMEN'S WEAR" data-price="530" data-rating="4.5" data-color="OAT" data-size="S" data-name="Double-Breasted Trench">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Double-Breasted Trench" src="assets/double_breasted_trench.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Double-Breasted Trench</span>
+<span class="product-price">$530</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(16 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 12 -->
+<div class="product-card" data-category="WOMEN'S WEAR" data-price="530" data-rating="4.5" data-color="INK" data-size="M" data-name="Belted Cotton Coat">
+<div class="product-image">
+<span class="badge">ATELIER</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Belted Cotton Coat" src="assets/belted_cotton_coat.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Belted Cotton Coat</span>
+<span class="product-price">$530</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(333 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 13 -->
+<div class="product-card" data-category="MEN'S WEAR" data-price="160" data-rating="4.5" data-color="CLAY" data-size="M" data-name="Raw Selvedge Denim">
+<div class="product-image">
+<span class="badge">POPULAR</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Raw Selvedge Denim" src="assets/raw_selvedge_denim.jpg"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Raw Selvedge Denim</span>
+<span class="product-price">$160</span>
+</div>
+<span class="product-category">MEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(153 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 14 -->
+<div class="product-card" data-category="WOMEN'S WEAR" data-price="120" data-rating="4.5" data-color="OAT" data-size="S" data-name="Wide-Leg Linen Trousers">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Wide-Leg Linen Trousers" src="assets/wide_leg_linen_trousers.jpg"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Wide-Leg Linen Trousers</span>
+<span class="product-price">$120</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(142 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 15 -->
+<div class="product-card" data-category="WOMEN'S WEAR" data-price="930" data-rating="4.5" data-color="OLIVE" data-size="XS" data-name="High-Rise Straight Jeans">
+<div class="product-image">
+<span class="badge">POPULAR</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="High-Rise Straight Jeans" src="assets/trouser.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">High-Rise Straight Jeans</span>
+<span class="product-price">$930</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(45 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 16 -->
+<div class="product-card" data-category="MEN'S WEAR" data-price="600" data-rating="4.5" data-color="NATURAL" data-size="L" data-name="Unstructured Linen Blazer">
+<div class="product-image">
+<span class="badge">ATELIER</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Unstructured Linen Blazer" src="assets/unstructured_linen_blazer.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Unstructured Linen Blazer</span>
+<span class="product-price">$600</span>
+</div>
+<span class="product-category">MEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(342 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 17 -->
+<div class="product-card" data-category="WOMEN'S WEAR" data-price="130" data-rating="5" data-color="CAMEL" data-size="M" data-name="Tailored Wool Blazer">
+<div class="product-image">
+<span class="badge">ATELIER</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Tailored Wool Blazer" src="assets/tailored_wool_blazer.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Tailored Wool Blazer</span>
+<span class="product-price">$130</span>
 </div>
 <span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
 </div>
-<span class="rating-score">4.9 (4)</span>
+<span class="rating-score">(27 likes)</span>
 </div>
 </div>
 </div>
-<!-- Product 7 -->
-<div class="product-card">
+<!-- Product 18 -->
+<div class="product-card" data-category="MEN'S WEAR" data-price="980" data-rating="5" data-color="SAND" data-size="XL" data-name="Cashmere Blend Blazer">
 <div class="product-image">
+<span class="badge">EXCLUSIVE</span>
 <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Cropped Cotton Cardigan" src="assets/cardigan.webp"/>
+<img alt="Cashmere Blend Blazer" src="assets/cashmere_blend_blazer.webp"/>
 </div>
 <div class="product-info">
 <div class="product-title-row">
-<span class="product-title">Cropped Cotton Cardigan</span>
-<span class="product-price">$124</span>
-</div>
-<span class="product-category">WOMEN'S WEAR</span>
-<div class="product-rating">
-<div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-</div>
-<span class="rating-score">4.6 (2)</span>
-</div>
-</div>
-</div>
-<!-- Product 8 -->
-<div class="product-card">
-<div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Poplin Midi Skirt" src="assets/coat.webp"/>
-</div>
-<div class="product-info">
-<div class="product-title-row">
-<span class="product-title">Poplin Midi Skirt</span>
-<span class="product-price">$98</span>
-</div>
-<span class="product-category">WOMEN'S WEAR</span>
-<div class="product-rating">
-<div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-</div>
-<span class="rating-score">4.4 (3)</span>
-</div>
-</div>
-</div>
-<!-- Product 9 -->
-<div class="product-card">
-<div class="product-image">
-<span class="badge">ATELIER</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Cashmere Wrap Coat" src="assets/jacket.webp"/>
-</div>
-<div class="product-info">
-<div class="product-title-row">
-<span class="product-title">Cashmere Wrap Coat</span>
-<span class="product-price">$520</span>
+<span class="product-title">Cashmere Blend Blazer</span>
+<span class="product-price">$980</span>
 </div>
 <span class="product-category">MEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
 </div>
-<span class="rating-score">5.0 (4)</span>
-</div>
-</div>
-</div>
-<!-- Product 10 -->
-<div class="product-card">
-<div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Sleeveless Linen Top" src="assets/vest.webp"/>
-</div>
-<div class="product-info">
-<div class="product-title-row">
-<span class="product-title">Sleeveless Linen Top</span>
-<span class="product-price">$74</span>
-</div>
-<span class="product-category">WOMEN'S WEAR</span>
-<div class="product-rating">
-<div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-</div>
-<span class="rating-score">4.5 (2)</span>
-</div>
-</div>
-</div>
-<!-- Product 11 -->
-<div class="product-card">
-<div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Tailored Crepe Trouser" src="assets/trouser.webp"/>
-</div>
-<div class="product-info">
-<div class="product-title-row">
-<span class="product-title">Tailored Crepe Trouser</span>
-<span class="product-price">$158</span>
-</div>
-<span class="product-category">WOMEN'S WEAR</span>
-<div class="product-rating">
-<div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-</div>
-<span class="rating-score">4.7 (3)</span>
-</div>
-</div>
-</div>
-<!-- Product 12 -->
-<div class="product-card">
-<div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Ribbed Lounge Set" src="assets/cardigan.webp"/>
-</div>
-<div class="product-info">
-<div class="product-title-row">
-<span class="product-title">Ribbed Lounge Set</span>
-<span class="product-price">$138</span>
-</div>
-<span class="product-category">ESSENTIALS</span>
-<div class="product-rating">
-<div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-</div>
-<span class="rating-score">4.6 (4)</span>
-</div>
-</div>
-</div>
-<!-- Product 13 -->
-<div class="product-card">
-<div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Cotton Crew Socks (3-pack)" src="assets/sneaker.webp"/>
-</div>
-<div class="product-info">
-<div class="product-title-row">
-<span class="product-title">Cotton Crew Socks (3-pack)</span>
-<span class="product-price">$34</span>
-</div>
-<span class="product-category">ESSENTIALS</span>
-<div class="product-rating">
-<div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-</div>
-<span class="rating-score">4.4 (2)</span>
-</div>
-</div>
-</div>
-<!-- Product 14 -->
-<div class="product-card">
-<div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Brushed Flannel Overshirt" src="assets/shirt.webp"/>
-</div>
-<div class="product-info">
-<div class="product-title-row">
-<span class="product-title">Brushed Flannel Overshirt</span>
-<span class="product-price">$145</span>
-</div>
-<span class="product-category">ESSENTIALS</span>
-<div class="product-rating">
-<div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-</div>
-<span class="rating-score">4.7 (3)</span>
-</div>
-</div>
-</div>
-<!-- Product 15 -->
-<div class="product-card">
-<div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Hand-Sewn Leather Loafer" src="assets/sneaker.webp"/>
-</div>
-<div class="product-info">
-<div class="product-title-row">
-<span class="product-title">Hand-Sewn Leather Loafer</span>
-<span class="product-price">$285</span>
-</div>
-<span class="product-category">ESSENTIALS</span>
-<div class="product-rating">
-<div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-</div>
-<span class="rating-score">4.8 (4)</span>
-</div>
-</div>
-</div>
-<!-- Product 16 -->
-<div class="product-card">
-<div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Woven Leather Belt" src="assets/tee.webp"/>
-</div>
-<div class="product-info">
-<div class="product-title-row">
-<span class="product-title">Woven Leather Belt</span>
-<span class="product-price">$78</span>
-</div>
-<span class="product-category">ACCESSORIES</span>
-<div class="product-rating">
-<div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-</div>
-<span class="rating-score">4.5 (2)</span>
-</div>
-</div>
-</div>
-<!-- Product 17 -->
-<div class="product-card">
-<div class="product-image">
-<span class="badge">NEW</span>
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Featherweight Cashmere Scarf" src="overassets/coat.webp"/>
-</div>
-<div class="product-info">
-<div class="product-title-row">
-<span class="product-title">Featherweight Cashmere Scarf</span>
-<span class="product-price">$145</span>
-</div>
-<span class="product-category">ACCESSORIES</span>
-<div class="product-rating">
-<div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<span class="rating-score">4.9 (3)</span>
-</div>
-</div>
-</div>
-<!-- Product 18 -->
-<div class="product-card">
-<div class="product-image">
-<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Canvas Market Tote" src="assets/coat.webp"/>
-</div>
-<div class="product-info">
-<div class="product-title-row">
-<span class="product-title">Canvas Market Tote</span>
-<span class="product-price">$92</span>
-</div>
-<span class="product-category">ACCESSORIES</span>
-<div class="product-rating">
-<div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-</div>
-<span class="rating-score">4.6 (4)</span>
+<span class="rating-score">(232 likes)</span>
 </div>
 </div>
 </div>
 <!-- Product 19 -->
-<div class="product-card">
+<div class="product-card" data-category="WOMEN'S WEAR" data-price="110" data-rating="5" data-color="SKY" data-size="XS" data-name="Double-Faced Wool Overcoat">
 <div class="product-image">
 <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Horn-Frame Sunglasses" src="assets/cardigan.webp"/>
+<img alt="Double-Faced Wool Overcoat" src="assets/double_faced_wool_overcoat.webp"/>
 </div>
 <div class="product-info">
 <div class="product-title-row">
-<span class="product-title">Horn-Frame Sunglasses</span>
-<span class="product-price">$220</span>
+<span class="product-title">Double-Faced Wool Overcoat</span>
+<span class="product-price">$110</span>
 </div>
-<span class="product-category">ACCESSORIES</span>
+<span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
 </div>
-<span class="rating-score">4.7 (2)</span>
+<span class="rating-score">(62 likes)</span>
 </div>
 </div>
 </div>
 <!-- Product 20 -->
-<div class="product-card">
+<div class="product-card" data-category="WOMEN'S WEAR" data-price="520" data-rating="4.5" data-color="SKY" data-size="XL" data-name="Structured Wool Coat">
 <div class="product-image">
+<span class="badge">ATELIER</span>
 <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-<img alt="Silk Twill Square" src="assets/slip_dress.webp"/>
+<img alt="Structured Wool Coat" src="assets/structured_wool_coat.webp"/>
 </div>
 <div class="product-info">
 <div class="product-title-row">
-<span class="product-title">Silk Twill Square</span>
-<span class="product-price">$58</span>
+<span class="product-title">Structured Wool Coat</span>
+<span class="product-price">$520</span>
 </div>
-<span class="product-category">ACCESSORIES</span>
+<span class="product-category">WOMEN'S WEAR</span>
 <div class="product-rating">
 <div class="stars">
 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
 </div>
-<span class="rating-score">4.3 (3)</span>
+<span class="rating-score">(305 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 21 -->
+<div class="product-card" data-category="MEN'S WEAR" data-price="500" data-rating="4.5" data-color="INK" data-size="L" data-name="Heavy Cashmere Coat">
+<div class="product-image">
+<span class="badge">EXCLUSIVE</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Heavy Cashmere Coat" src="assets/heavy_cashmere_coat.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Heavy Cashmere Coat</span>
+<span class="product-price">$500</span>
+</div>
+<span class="product-category">MEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(63 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 22 -->
+<div class="product-card" data-category="WOMEN'S WEAR" data-price="80" data-rating="4.5" data-color="TORTOISE" data-size="S" data-name="Cropped Cotton Cardigan">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Cropped Cotton Cardigan" src="assets/cropped_cotton_cardigan.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Cropped Cotton Cardigan</span>
+<span class="product-price">$80</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(90 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 23 -->
+<div class="product-card" data-category="WOMEN'S WEAR" data-price="740" data-rating="4.5" data-color="INK" data-size="M" data-name="Chunky Knit Cardigan">
+<div class="product-image">
+<span class="badge">NEW</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Chunky Knit Cardigan" src="assets/chunky_knit_cardigan.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Chunky Knit Cardigan</span>
+<span class="product-price">$740</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(234 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 24 -->
+<div class="product-card" data-category="MEN'S WEAR" data-price="520" data-rating="4.5" data-color="INK" data-size="XS" data-name="Ribbed Wool Cardigan">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Ribbed Wool Cardigan" src="assets/ribbed_wool_cardigan.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Ribbed Wool Cardigan</span>
+<span class="product-price">$520</span>
+</div>
+<span class="product-category">MEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(29 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 25 -->
+<div class="product-card" data-category="ESSENTIALS" data-price="250" data-rating="4.5" data-color="SKY" data-size="XS" data-name="Classic White Tee">
+<div class="product-image">
+<span class="badge">RESTOCKED</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Classic White Tee" src="assets/classic_white_tee.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Classic White Tee</span>
+<span class="product-price">$250</span>
+</div>
+<span class="product-category">ESSENTIALS</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(168 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 26 -->
+<div class="product-card" data-category="MEN'S WEAR" data-price="210" data-rating="4.5" data-color="IVORY" data-size="M" data-name="Heavyweight Cotton Crew">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Heavyweight Cotton Crew" src="assets/heavyweight_cotton_crew.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Heavyweight Cotton Crew</span>
+<span class="product-price">$210</span>
+</div>
+<span class="product-category">MEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(331 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 27 -->
+<div class="product-card" data-category="ESSENTIALS" data-price="770" data-rating="4.5" data-color="BUTTER" data-size="M" data-name="Slub Cotton T-Shirt">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Slub Cotton T-Shirt" src="assets/slub_cotton_t_shirt.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Slub Cotton T-Shirt</span>
+<span class="product-price">$770</span>
+</div>
+<span class="product-category">ESSENTIALS</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(269 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 28 -->
+<div class="product-card" data-category="MEN'S WEAR" data-price="550" data-rating="4.5" data-color="NATURAL" data-size="S" data-name="Performance Active Tee">
+<div class="product-image">
+<span class="badge">NEW</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Performance Active Tee" src="assets/performance_active_tee.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Performance Active Tee</span>
+<span class="product-price">$550</span>
+</div>
+<span class="product-category">MEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(127 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 29 -->
+<div class="product-card" data-category="ESSENTIALS" data-price="660" data-rating="4" data-color="OAT" data-size="L" data-name="Breathable Cotton Top">
+<div class="product-image">
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Breathable Cotton Top" src="assets/breathable_cotton_top.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Breathable Cotton Top</span>
+<span class="product-price">$660</span>
+</div>
+<span class="product-category">ESSENTIALS</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+</div>
+<span class="rating-score">(164 likes)</span>
+</div>
+</div>
+</div>
+<!-- Product 30 -->
+<div class="product-card" data-category="WOMEN'S WEAR" data-price="410" data-rating="4.5" data-color="CHESTNUT" data-size="XL" data-name="Seamless Knit Tee">
+<div class="product-image">
+<span class="badge">POPULAR</span>
+<button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+<img alt="Seamless Knit Tee" src="assets/seamless_knit_tee.webp"/>
+</div>
+<div class="product-info">
+<div class="product-title-row">
+<span class="product-title">Seamless Knit Tee</span>
+<span class="product-price">$410</span>
+</div>
+<span class="product-category">WOMEN'S WEAR</span>
+<div class="product-rating">
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="rating-score">(219 likes)</span>
 </div>
 </div>
 </div>
@@ -562,6 +779,10 @@
 <p>Crafted for everyday</p>
 </div>
 </footer>
+<script src="shop.js"></script>
 </body>
 </html>
+
+
+
 

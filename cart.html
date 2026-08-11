@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Stackly</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="assets/logo_0174.webp" alt="STACKLY Logo" class="logo-img" />
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="shop.html">SHOP</a>
+            <a href="journal.html">JOURNAL</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        <div class="header-icons">
+            <a href="cart.html" class="cart"><i class="fa-solid fa-cart-shopping"></i> (1)</a>
+            <a href="signin.html" class="user"><i class="fa-regular fa-user"></i></a>
+            <a href="#" class="search"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+    </header>
+
+    <main class="cart-page">
+        <div class="cart-layout">
+            
+            <!-- Left Column: Items -->
+            <div class="cart-main">
+                <div class="cart-preheading">BAG</div>
+                <h1 class="cart-heading">Your selection</h1>
+                <div class="cart-item-count">1 ITEM</div>
+                
+                <hr class="cart-divider">
+                
+                <!-- Cart Item -->
+                <div class="cart-item">
+                    <img src="assets/cardigan.webp" alt="Olive Knit Cardigan" class="cart-item-image">
+                    
+                    <div class="cart-item-info">
+                        <h3 class="cart-item-title">Olive Knit Cardigan</h3>
+                        <p class="cart-item-meta">MEN'S WEAR &middot; SIZE M</p>
+                    </div>
+                    
+                    <div class="cart-item-controls">
+                        <div class="cart-qty">
+                            <button class="cart-qty-btn"><i class="fa-solid fa-minus"></i></button>
+                            <input type="text" value="1" class="cart-qty-input" readonly>
+                            <button class="cart-qty-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        
+                        <button class="cart-item-remove" title="Remove item"><i class="fa-regular fa-trash-can"></i></button>
+                        
+                        <div class="cart-item-price">$148</div>
+                    </div>
+                </div>
+                
+                <hr class="cart-divider">
+            </div>
+
+            <!-- Right Column: Summary -->
+            <div class="cart-sidebar">
+                <div class="cart-summary">
+                    <h2 class="cart-summary-title">Summary</h2>
+                    
+                    <div class="cart-summary-row">
+                        <span>Subtotal</span>
+                        <span>$148</span>
+                    </div>
+                    <div class="cart-summary-row">
+                        <span>Shipping</span>
+                        <span>$12</span>
+                    </div>
+                    
+                    <hr class="cart-divider" style="margin: 1.5rem 0;">
+                    
+                    <div class="cart-summary-total">
+                        <span>Total</span>
+                        <span>$160</span>
+                    </div>
+                    
+                    <button class="cart-checkout-btn">
+                        CHECKOUT <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    
+                    <button class="cart-continue-btn" onclick="window.location.href='shop.html'">
+                        CONTINUE SHOPPING
+                    </button>
+                    
+                    <p class="cart-summary-note">
+                        Complimentary shipping on orders over $150. Returns accepted within 30 days.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="assets/logo_0174.webp" alt="STACKLY Logo" class="logo-img" />
+                </div>
+                <p>Premium looks, everyday comfort and honest prices &mdash; made in small runs.</p>
+            </div>
+            <div class="footer-links">
+                <h4>SHOP</h4>
+                <ul>
+                    <li><a href="#">New arrivals</a></li>
+                    <li><a href="#">Men's wear</a></li>
+                    <li><a href="#">Women's wear</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>COMPANY</h4>
+                <ul>
+                    <li><a href="#">Our journey</a></li>
+                    <li><a href="#">Journal</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Account</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>FOLLOW</h4>
+                <ul>
+                    <li><a href="#">Instagram &mdash; @stackly.studio</a></li>
+                    <li><a href="#">Pinterest &mdash; @stackly</a></li>
+                    <li><a href="#">hello@stackly.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stackly. All rights reserved.</p>
+            <p>Crafted for everyday</p>
+        </div>
+    </footer>
+</body>
+</html>

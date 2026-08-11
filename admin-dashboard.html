@@ -20,12 +20,12 @@
             </a>
             
             <nav class="sidebar-nav">
-                <a href="#" class="active"><i class="fa-solid fa-chart-line"></i> Overview</a>
-                <a href="#"><i class="fa-solid fa-cart-flatbed"></i> Orders</a>
-                <a href="#"><i class="fa-solid fa-boxes-stacked"></i> Inventory</a>
-                <a href="#"><i class="fa-solid fa-users"></i> Customers</a>
-                <a href="#"><i class="fa-solid fa-chart-pie"></i> Analytics</a>
-                <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+                <a href="#" class="active" data-target="tab-overview"><i class="fa-solid fa-chart-line"></i> Overview</a>
+                <a href="#" data-target="tab-orders"><i class="fa-solid fa-cart-flatbed"></i> Orders</a>
+                <a href="#" data-target="tab-inventory"><i class="fa-solid fa-boxes-stacked"></i> Inventory</a>
+                <a href="#" data-target="tab-customers"><i class="fa-solid fa-users"></i> Customers</a>
+                <a href="#" data-target="tab-analytics"><i class="fa-solid fa-chart-pie"></i> Analytics</a>
+                <a href="#" data-target="tab-settings"><i class="fa-solid fa-gear"></i> Settings</a>
                 <a href="signin.html" style="margin-top: 1rem; color: #ef4444;"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out</a>
             </nav>
 
@@ -43,65 +43,562 @@
                 </div>
             </div>
 
-            <div class="dashboard-grid">
-                <div class="dashboard-card">
-                    <div class="dashboard-card-title">Total Revenue (30d)</div>
-                    <div class="dashboard-card-value">$42,590</div>
+            <div id="tab-overview" class="dashboard-section active" style="display: block;">
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-title">Total Revenue (30d)</div>
+                        <div class="dashboard-card-value">$42,590</div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-title">Active Orders</div>
+                        <div class="dashboard-card-value">18</div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-title">New Customers (30d)</div>
+                        <div class="dashboard-card-value">124</div>
+                    </div>
                 </div>
-                <div class="dashboard-card">
-                    <div class="dashboard-card-title">Active Orders</div>
-                    <div class="dashboard-card-value">18</div>
-                </div>
-                <div class="dashboard-card">
-                    <div class="dashboard-card-title">New Customers (30d)</div>
-                    <div class="dashboard-card-value">124</div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h2 class="serif-heading" style="margin-bottom: 1.5rem; font-size: 1.75rem;">Recent Orders</h2>
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#STK-2024-893</td>
+                                <td>Emily Carter</td>
+                                <td>Just now</td>
+                                <td>$148.00</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>#STK-2024-892</td>
+                                <td>Daniel Reed</td>
+                                <td>2 hours ago</td>
+                                <td>$345.00</td>
+                                <td><span class="status-badge shipped">Shipped</span></td>
+                            </tr>
+                            <tr>
+                                <td>#STK-2024-891</td>
+                                <td>Ida Sørensen</td>
+                                <td>Yesterday</td>
+                                <td>$148.00</td>
+                                <td><span class="status-badge delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>#STK-2024-890</td>
+                                <td>Sophia Nguyen</td>
+                                <td>Yesterday</td>
+                                <td>$118.00</td>
+                                <td><span class="status-badge delivered">Delivered</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
-            <div style="margin-bottom: 2rem;">
-                <h2 class="serif-heading" style="margin-bottom: 1.5rem; font-size: 1.75rem;">Recent Orders</h2>
-                <table class="dashboard-table">
-                    <thead>
-                        <tr>
-                            <th>Order ID</th>
-                            <th>Customer</th>
-                            <th>Date</th>
-                            <th>Total</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>#STK-2024-893</td>
-                            <td>Emily Carter</td>
-                            <td>Just now</td>
-                            <td>$148.00</td>
-                            <td><span class="status-badge pending">Pending</span></td>
-                        </tr>
-                        <tr>
-                            <td>#STK-2024-892</td>
-                            <td>Daniel Reed</td>
-                            <td>2 hours ago</td>
-                            <td>$345.00</td>
-                            <td><span class="status-badge shipped">Shipped</span></td>
-                        </tr>
-                        <tr>
-                            <td>#STK-2024-891</td>
-                            <td>Ida Sørensen</td>
-                            <td>Yesterday</td>
-                            <td>$148.00</td>
-                            <td><span class="status-badge delivered">Delivered</span></td>
-                        </tr>
-                        <tr>
-                            <td>#STK-2024-890</td>
-                            <td>Sophia Nguyen</td>
-                            <td>Yesterday</td>
-                            <td>$118.00</td>
-                            <td><span class="status-badge delivered">Delivered</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div id="tab-orders" class="dashboard-section" style="display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                    <h2 class="serif-heading" style="font-size: 1.75rem;">Orders Management</h2>
+                    <button class="auth-submit-btn" style="width: auto; padding: 0.6rem 1.25rem; font-size: 0.85rem; background: white; color: var(--text-dark); border: 1px solid var(--border-color);"><i class="fa-solid fa-download" style="margin-right: 0.5rem;"></i> EXPORT CSV</button>
+                </div>
+                
+                <!-- Section 1: Order Status -->
+                <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-dark); border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">Order Status</h3>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                        <div>
+                            <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">UNFULFILLED</p>
+                            <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">18</p>
+                            <p style="color: #f59e0b; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-clock"></i> Action required</p>
+                        </div>
+                        <div>
+                            <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">SHIPPED (30D)</p>
+                            <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">142</p>
+                            <p style="color: #10b981; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-truck"></i> On track</p>
+                        </div>
+                        <div>
+                            <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">RETURNS</p>
+                            <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">4</p>
+                            <p style="color: #ef4444; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-arrow-rotate-left"></i> Pending inspection</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                    <!-- Section 2: All Orders -->
+                    <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">
+                            <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--text-dark);">All Orders</h3>
+                            <div style="display: flex; gap: 1rem;">
+                                <input type="text" placeholder="Search Order ID..." style="padding: 0.4rem 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; font-size: 0.85rem; font-family: inherit;">
+                            </div>
+                        </div>
+                        
+                        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+                            <thead>
+                                <tr style="color: var(--text-gray); border-bottom: 1px solid #f3ede6;">
+                                    <th style="padding-bottom: 1rem; font-weight: 500;">Order ID</th>
+                                    <th style="padding-bottom: 1rem; font-weight: 500;">Customer</th>
+                                    <th style="padding-bottom: 1rem; font-weight: 500;">Total</th>
+                                    <th style="padding-bottom: 1rem; font-weight: 500; text-align: right;">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid #f3ede6;">
+                                    <td style="padding: 1rem 0; font-weight: 600;">#STK-893</td>
+                                    <td style="padding: 1rem 0;">Emily Carter</td>
+                                    <td style="padding: 1rem 0;">$148.00</td>
+                                    <td style="padding: 1rem 0; text-align: right;"><span style="font-weight: 600; background: #fef3c7; color: #92400e; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">UNFULFILLED</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #f3ede6;">
+                                    <td style="padding: 1rem 0; font-weight: 600;">#STK-892</td>
+                                    <td style="padding: 1rem 0;">Daniel Reed</td>
+                                    <td style="padding: 1rem 0;">$345.00</td>
+                                    <td style="padding: 1rem 0; text-align: right;"><span style="font-weight: 600; background: #e0e7ff; color: #3730a3; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">SHIPPED</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1rem 0; font-weight: 600;">#STK-891</td>
+                                    <td style="padding: 1rem 0;">Ida Sørensen</td>
+                                    <td style="padding: 1rem 0;">$148.00</td>
+                                    <td style="padding: 1rem 0; text-align: right;"><span style="font-weight: 600; background: #d1fae5; color: #065f46; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">DELIVERED</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Section 3: Shipping Overview -->
+                    <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-dark); border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">Shipping Methods</h3>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid #f3ede6; margin-bottom: 1rem;">
+                            <span style="font-weight: 500; font-size: 0.95rem; color: var(--text-dark);">Standard Delivery</span>
+                            <span style="font-weight: 600;">68%</span>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid #f3ede6; margin-bottom: 1rem;">
+                            <span style="font-weight: 500; font-size: 0.95rem; color: var(--text-dark);">Express Shipping</span>
+                            <span style="font-weight: 600;">24%</span>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 500; font-size: 0.95rem; color: var(--text-dark);">International</span>
+                            <span style="font-weight: 600;">8%</span>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div id="tab-inventory" class="dashboard-section" style="display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                    <h2 class="serif-heading" style="font-size: 1.75rem;">Inventory Management</h2>
+                    <button class="auth-submit-btn" style="width: auto; padding: 0.6rem 1.25rem; font-size: 0.85rem;"><i class="fa-solid fa-plus" style="margin-right: 0.5rem;"></i> ADD PRODUCT</button>
+                </div>
+                
+                <!-- Section 1: Inventory Status -->
+                <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-dark); border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">Inventory Status</h3>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                        <div>
+                            <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">TOTAL PRODUCTS</p>
+                            <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">142</p>
+                            <p style="color: #10b981; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;">Active across all channels</p>
+                        </div>
+                        <div>
+                            <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">LOW STOCK</p>
+                            <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">12</p>
+                            <p style="color: #f59e0b; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-triangle-exclamation"></i> Below 5 units</p>
+                        </div>
+                        <div>
+                            <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">OUT OF STOCK</p>
+                            <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">3</p>
+                            <p style="color: #ef4444; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-circle-xmark"></i> Requires restock</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                    <!-- Section 2: Product Stock List -->
+                    <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">
+                            <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--text-dark);">Stock Levels</h3>
+                            <div style="display: flex; gap: 1rem;">
+                                <input type="text" placeholder="Search SKU..." style="padding: 0.4rem 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; font-size: 0.85rem; font-family: inherit;">
+                            </div>
+                        </div>
+                        
+                        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+                            <thead>
+                                <tr style="color: var(--text-gray); border-bottom: 1px solid #f3ede6;">
+                                    <th style="padding-bottom: 1rem; font-weight: 500;">Product</th>
+                                    <th style="padding-bottom: 1rem; font-weight: 500;">SKU</th>
+                                    <th style="padding-bottom: 1rem; font-weight: 500;">Stock</th>
+                                    <th style="padding-bottom: 1rem; font-weight: 500; text-align: right;">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid #f3ede6;">
+                                    <td style="padding: 1rem 0;">
+                                        <div style="display: flex; gap: 1rem; align-items: center;">
+                                            <img src="assets/belted_cotton_coat.webp" style="width: 36px; height: 36px; object-fit: cover; border-radius: 4px;" alt="Coat">
+                                            <span style="font-weight: 500;">Sand Linen Coat</span>
+                                        </div>
+                                    </td>
+                                    <td style="padding: 1rem 0; color: var(--text-gray); font-size: 0.85rem;">STK-C-042</td>
+                                    <td style="padding: 1rem 0;">18</td>
+                                    <td style="padding: 1rem 0; text-align: right;"><span style="font-weight: 600; background: #d1fae5; color: #065f46; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">IN STOCK</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #f3ede6;">
+                                    <td style="padding: 1rem 0;">
+                                        <div style="display: flex; gap: 1rem; align-items: center;">
+                                            <img src="assets/cardigan.webp" style="width: 36px; height: 36px; object-fit: cover; border-radius: 4px;" alt="Cardigan">
+                                            <span style="font-weight: 500;">Olive Knit Cardigan</span>
+                                        </div>
+                                    </td>
+                                    <td style="padding: 1rem 0; color: var(--text-gray); font-size: 0.85rem;">STK-K-118</td>
+                                    <td style="padding: 1rem 0; color: #f59e0b; font-weight: 600;">2</td>
+                                    <td style="padding: 1rem 0; text-align: right;"><span style="font-weight: 600; background: #fef3c7; color: #92400e; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">LOW STOCK</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1rem 0;">
+                                        <div style="display: flex; gap: 1rem; align-items: center;">
+                                            <img src="assets/classic_trench_coat.webp" style="width: 36px; height: 36px; object-fit: cover; border-radius: 4px;" alt="Trench">
+                                            <span style="font-weight: 500;">Classic Trench Coat</span>
+                                        </div>
+                                    </td>
+                                    <td style="padding: 1rem 0; color: var(--text-gray); font-size: 0.85rem;">STK-O-092</td>
+                                    <td style="padding: 1rem 0; color: #ef4444; font-weight: 600;">0</td>
+                                    <td style="padding: 1rem 0; text-align: right;"><span style="font-weight: 600; background: #fee2e2; color: #991b1b; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">SOLD OUT</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Section 3: Categories -->
+                    <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-dark); border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">Categories</h3>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid #f3ede6; margin-bottom: 1rem;">
+                            <span style="font-weight: 500; font-size: 0.95rem; color: var(--text-dark);">Women's Wear</span>
+                            <span style="color: var(--text-gray); font-size: 0.85rem;">84 items</span>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid #f3ede6; margin-bottom: 1rem;">
+                            <span style="font-weight: 500; font-size: 0.95rem; color: var(--text-dark);">Men's Wear</span>
+                            <span style="color: var(--text-gray); font-size: 0.85rem;">46 items</span>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 500; font-size: 0.95rem; color: var(--text-dark);">Accessories</span>
+                            <span style="color: var(--text-gray); font-size: 0.85rem;">12 items</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-customers" class="dashboard-section" style="display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                    <h2 class="serif-heading" style="font-size: 1.75rem;">Customers</h2>
+                    <button class="auth-submit-btn" style="width: auto; padding: 0.6rem 1.25rem; font-size: 0.85rem;"><i class="fa-solid fa-plus" style="margin-right: 0.5rem;"></i> ADD CUSTOMER</button>
+                </div>
+                
+                <!-- Section 1: Customer Metrics -->
+                <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-dark); border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">Customer Metrics</h3>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                        <div>
+                            <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">TOTAL CUSTOMERS</p>
+                            <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">8,432</p>
+                            <p style="color: #10b981; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-arrow-trend-up"></i> +42 this week</p>
+                        </div>
+                        <div>
+                            <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">REPEAT CUSTOMER RATE</p>
+                            <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">34.8%</p>
+                            <p style="color: #10b981; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-arrow-trend-up"></i> +1.2% this month</p>
+                        </div>
+                        <div>
+                            <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">AVERAGE LIFETIME VALUE</p>
+                            <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">$425.00</p>
+                            <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;">Consistent trend</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                    <!-- Section 2: Customer Directory -->
+                    <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">
+                            <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--text-dark);">Recent Customers</h3>
+                            <a href="#" style="font-size: 0.85rem; font-weight: 600; text-decoration: underline;">View All</a>
+                        </div>
+                        
+                        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+                            <thead>
+                                <tr style="color: var(--text-gray); border-bottom: 1px solid #f3ede6;">
+                                    <th style="padding-bottom: 1rem; font-weight: 500;">Customer Name</th>
+                                    <th style="padding-bottom: 1rem; font-weight: 500;">Orders</th>
+                                    <th style="padding-bottom: 1rem; font-weight: 500; text-align: right;">Total Spent</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid #f3ede6;">
+                                    <td style="padding: 1rem 0;">
+                                        <p style="font-weight: 600; margin-bottom: 0.25rem;">Emma Wilson</p>
+                                        <p style="color: var(--text-gray); font-size: 0.85rem;">emma.w@example.com</p>
+                                    </td>
+                                    <td style="padding: 1rem 0;">4</td>
+                                    <td style="padding: 1rem 0; font-weight: 500; text-align: right;">$892.00</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #f3ede6;">
+                                    <td style="padding: 1rem 0;">
+                                        <p style="font-weight: 600; margin-bottom: 0.25rem;">Daniel Reed</p>
+                                        <p style="color: var(--text-gray); font-size: 0.85rem;">d.reed@example.com</p>
+                                    </td>
+                                    <td style="padding: 1rem 0;">1</td>
+                                    <td style="padding: 1rem 0; font-weight: 500; text-align: right;">$345.00</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1rem 0;">
+                                        <p style="font-weight: 600; margin-bottom: 0.25rem;">Ida Sørensen</p>
+                                        <p style="color: var(--text-gray); font-size: 0.85rem;">ida.sorensen@example.com</p>
+                                    </td>
+                                    <td style="padding: 1rem 0;">12</td>
+                                    <td style="padding: 1rem 0; font-weight: 500; text-align: right;">$2,450.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Section 3: Customer Segments -->
+                    <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-dark); border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">Key Segments</h3>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid #f3ede6; margin-bottom: 1rem;">
+                            <div>
+                                <p style="font-weight: 600; font-size: 0.95rem; color: var(--text-dark);">VIP Customers</p>
+                                <p style="color: var(--text-gray); font-size: 0.85rem;">Spent > $1,000</p>
+                            </div>
+                            <span style="font-weight: 600; background: #f3ede6; color: var(--text-dark); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem;">420</span>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid #f3ede6; margin-bottom: 1rem;">
+                            <div>
+                                <p style="font-weight: 600; font-size: 0.95rem; color: var(--text-dark);">New (30d)</p>
+                                <p style="color: var(--text-gray); font-size: 0.85rem;">First purchase made</p>
+                            </div>
+                            <span style="font-weight: 600; background: #f3ede6; color: var(--text-dark); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem;">124</span>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <p style="font-weight: 600; font-size: 0.95rem; color: var(--text-dark);">At Risk</p>
+                                <p style="color: var(--text-gray); font-size: 0.85rem;">No purchase in 6mo</p>
+                            </div>
+                            <span style="font-weight: 600; background: #fee2e2; color: #ef4444; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem;">89</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-analytics" class="dashboard-section" style="display: none;">
+                <h2 class="serif-heading" style="margin-bottom: 2rem; font-size: 1.75rem;">Analytics Overview</h2>
+                
+                <!-- Section 1: Key Metrics -->
+                <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-dark); border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">Key Metrics (Last 30 Days)</h3>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                        <div>
+                            <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">STORE SESSIONS</p>
+                            <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">24,592</p>
+                            <p style="color: #10b981; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-arrow-trend-up"></i> +12.5% vs previous 30 days</p>
+                        </div>
+                        <div>
+                            <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">CONVERSION RATE</p>
+                            <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">3.2%</p>
+                            <p style="color: #10b981; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-arrow-trend-up"></i> +0.4% vs previous 30 days</p>
+                        </div>
+                        <div>
+                            <p style="color: var(--text-gray); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">AVERAGE ORDER VALUE</p>
+                            <p style="font-size: 2.25rem; font-weight: 400; font-family: 'Playfair Display', serif;">$185.00</p>
+                            <p style="color: #ef4444; font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem;"><i class="fa-solid fa-arrow-trend-down"></i> -2.1% vs previous 30 days</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                    <!-- Section 2: Top Products -->
+                    <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-dark); border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">Top Selling Products</h3>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid #f3ede6; margin-bottom: 1rem;">
+                            <div style="display: flex; gap: 1rem; align-items: center;">
+                                <img src="assets/belted_cotton_coat.webp" style="width: 48px; height: 48px; object-fit: cover; border-radius: 4px;" alt="Coat">
+                                <div>
+                                    <p style="font-weight: 600; font-size: 0.95rem;">Sand Linen Coat</p>
+                                    <p style="color: var(--text-gray); font-size: 0.85rem;">42 units sold</p>
+                                </div>
+                            </div>
+                            <span style="font-weight: 600;">$12,516</span>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid #f3ede6; margin-bottom: 1rem;">
+                            <div style="display: flex; gap: 1rem; align-items: center;">
+                                <img src="assets/cardigan.webp" style="width: 48px; height: 48px; object-fit: cover; border-radius: 4px;" alt="Cardigan">
+                                <div>
+                                    <p style="font-weight: 600; font-size: 0.95rem;">Olive Knit Cardigan</p>
+                                    <p style="color: var(--text-gray); font-size: 0.85rem;">38 units sold</p>
+                                </div>
+                            </div>
+                            <span style="font-weight: 600;">$5,624</span>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; gap: 1rem; align-items: center;">
+                                <img src="assets/tote_bag_1786294252949.jpg" style="width: 48px; height: 48px; object-fit: cover; border-radius: 4px;" alt="Tote">
+                                <div>
+                                    <p style="font-weight: 600; font-size: 0.95rem;">Canvas Tote Bag</p>
+                                    <p style="color: var(--text-gray); font-size: 0.85rem;">24 units sold</p>
+                                </div>
+                            </div>
+                            <span style="font-weight: 600;">$2,160</span>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Traffic Sources -->
+                    <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-dark); border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">Traffic Sources</h3>
+                        
+                        <div style="margin-bottom: 1.25rem;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.95rem;">
+                                <span style="font-weight: 500;">Organic Search</span>
+                                <span style="font-weight: 600;">45%</span>
+                            </div>
+                            <div style="width: 100%; height: 8px; background: #f3ede6; border-radius: 4px; overflow: hidden;">
+                                <div style="width: 45%; height: 100%; background: var(--text-dark);"></div>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 1.25rem;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.95rem;">
+                                <span style="font-weight: 500;">Direct</span>
+                                <span style="font-weight: 600;">30%</span>
+                            </div>
+                            <div style="width: 100%; height: 8px; background: #f3ede6; border-radius: 4px; overflow: hidden;">
+                                <div style="width: 30%; height: 100%; background: var(--text-dark);"></div>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 1.25rem;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.95rem;">
+                                <span style="font-weight: 500;">Social Media</span>
+                                <span style="font-weight: 600;">15%</span>
+                            </div>
+                            <div style="width: 100%; height: 8px; background: #f3ede6; border-radius: 4px; overflow: hidden;">
+                                <div style="width: 15%; height: 100%; background: var(--text-dark);"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.95rem;">
+                                <span style="font-weight: 500;">Referral</span>
+                                <span style="font-weight: 600;">10%</span>
+                            </div>
+                            <div style="width: 100%; height: 8px; background: #f3ede6; border-radius: 4px; overflow: hidden;">
+                                <div style="width: 10%; height: 100%; background: var(--text-dark);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-settings" class="dashboard-section" style="display: none;">
+                <h2 class="serif-heading" style="margin-bottom: 2rem; font-size: 1.75rem;">Store Settings</h2>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                    <!-- Section 1: General Details -->
+                    <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-dark); border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">General Details</h3>
+                        <form>
+                            <div class="input-group" style="margin-bottom: 1.5rem;">
+                                <label style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--text-gray); display: block; margin-bottom: 0.5rem;">STORE NAME</label>
+                                <input type="text" value="Stackly Studio" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
+                            </div>
+                            <div class="input-group" style="margin-bottom: 1.5rem;">
+                                <label style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--text-gray); display: block; margin-bottom: 0.5rem;">SUPPORT EMAIL</label>
+                                <input type="email" value="hello@stackly.com" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
+                            </div>
+                            <div class="input-group" style="margin-bottom: 2rem;">
+                                <label style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--text-gray); display: block; margin-bottom: 0.5rem;">STORE CURRENCY</label>
+                                <select style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit; background: white;">
+                                    <option>USD ($)</option>
+                                    <option>EUR (€)</option>
+                                    <option>GBP (£)</option>
+                                </select>
+                            </div>
+                            <button type="button" class="auth-submit-btn" style="width: auto; padding: 0.875rem 2rem;">SAVE CHANGES</button>
+                        </form>
+                    </div>
+
+                    <!-- Section 2: Staff Accounts -->
+                    <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-dark); border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">Staff Accounts</h3>
+                        
+                        <div style="border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 4px; margin-bottom: 1rem; position: relative;">
+                            <span style="position: absolute; top: 1.5rem; right: 1.5rem; background: var(--text-dark); color: white; font-size: 0.7rem; font-weight: 600; padding: 0.25rem 0.5rem; border-radius: 4px; letter-spacing: 0.05em;">OWNER</span>
+                            <p style="font-weight: 600; margin-bottom: 0.25rem;">Admin User</p>
+                            <p style="color: var(--text-gray); font-size: 0.85rem;">admin@stackly.com</p>
+                        </div>
+
+                        <div style="border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 4px; margin-bottom: 1rem; position: relative;">
+                            <span style="position: absolute; top: 1.5rem; right: 1.5rem; background: #f3ede6; color: var(--text-dark); font-size: 0.7rem; font-weight: 600; padding: 0.25rem 0.5rem; border-radius: 4px; letter-spacing: 0.05em;">EDITOR</span>
+                            <p style="font-weight: 600; margin-bottom: 0.25rem;">Emma Wilson</p>
+                            <p style="color: var(--text-gray); font-size: 0.85rem;">emma@stackly.com</p>
+                            <div style="margin-top: 1rem;">
+                                <button style="background: none; border: none; font-size: 0.85rem; font-weight: 500; color: #ef4444; cursor: pointer; font-family: inherit;">Remove Access</button>
+                            </div>
+                        </div>
+                        
+                        <button style="width: 100%; padding: 1.25rem; border: 1px dashed var(--border-color); background: none; color: var(--text-dark); font-weight: 600; cursor: pointer; border-radius: 4px; font-family: inherit; transition: all 0.2s ease;" onmouseover="this.style.background='#fafafa'" onmouseout="this.style.background='none'">
+                            <i class="fa-solid fa-user-plus" style="margin-right: 0.5rem;"></i> INVITE STAFF
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.sidebar-nav a[data-target]');
+            const sections = document.querySelectorAll('.dashboard-section');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Remove active from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    // Add active to clicked tab
+                    tab.classList.add('active');
+
+                    // Hide all sections
+                    sections.forEach(s => s.style.display = 'none');
+                    // Show target section
+                    const targetId = tab.getAttribute('data-target');
+                    document.getElementById(targetId).style.display = 'block';
+                });
+            });
+        });
+    </script>
         </main>
     </div>
 </body>
