@@ -122,6 +122,7 @@ body {
     align-items: flex-end;
     padding: 4rem;
     margin: 0;
+    transition: background-image 1.5s ease-in-out;
 }
 
 .hero::before {

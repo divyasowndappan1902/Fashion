@@ -345,6 +345,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+// Hero Background Slideshow
+document.addEventListener('DOMContentLoaded', () => {
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        const images = [
+            'url("assets/hero-bg.webp")',
+            'url("assets/fabrics.webp")',
+            'url("assets/about_ateliers.webp")'
+        ];
+        let currentIndex = 0;
+        
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            hero.style.backgroundImage = images[currentIndex];
+        }, 5000); // Change image every 5 seconds
+    }
+});
+
 // Dynamic User Email
 (function() {
     const savedEmail = localStorage.getItem('stackly_user_email');

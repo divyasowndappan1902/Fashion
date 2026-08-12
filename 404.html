@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -16,11 +16,23 @@
         <a href="index.html"><img src="assets/logo_0174.webp" alt="STACKLY Logo" style="height: 30px;" /></a>
     </div>
     
-    <div style="max-width: 600px; padding: 2rem;">
-        <span class="sub-heading" style="font-size: 0.75rem; letter-spacing: 0.15em; color: var(--text-gray); text-transform: uppercase; margin-bottom: 1rem; display: block;">404 ERROR</span>
-        <h1 class="serif-heading" style="font-size: 4rem; color: var(--text-dark); margin-bottom: 2rem; font-weight: 400;">Page not found</h1>
-        <p style="color: var(--text-gray); line-height: 1.6; margin-bottom: 3rem;">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+    <div id="error-card" style="max-width: 600px; padding: 2rem; transform-style: preserve-3d; will-change: transform;">
+        
+        <!-- Animated SVG -->
+        <div style="margin-bottom: 2rem; display: flex; justify-content: center; transform: translateZ(30px);">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" id="error-svg">
+                <!-- Abstract 404 shape or sad face/broken circle -->
+                <circle cx="60" cy="60" r="50" stroke="var(--text-dark)" stroke-width="4" class="svg-path" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="314" />
+                <path d="M40 45 L50 65 L60 45" stroke="var(--text-dark)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="svg-path" stroke-dasharray="50" stroke-dashoffset="50" />
+                <path d="M80 45 L70 65 L60 45" stroke="var(--text-dark)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="svg-path" stroke-dasharray="50" stroke-dashoffset="50" />
+                <path d="M40 85 Q60 70 80 85" stroke="var(--text-dark)" stroke-width="4" stroke-linecap="round" class="svg-path" stroke-dasharray="50" stroke-dashoffset="50" />
+            </svg>
+        </div>
+        
+        <span class="sub-heading" style="font-size: 0.75rem; letter-spacing: 0.15em; color: var(--text-gray); text-transform: uppercase; margin-bottom: 1rem; display: block; transform: translateZ(20px);">404 ERROR</span>
+        <h1 class="serif-heading" style="font-size: 4rem; color: var(--text-dark); margin-bottom: 2rem; font-weight: 400; transform: translateZ(40px);">Page not found</h1>
+        <p style="color: var(--text-gray); line-height: 1.6; margin-bottom: 3rem; transform: translateZ(20px);">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; transform: translateZ(30px);">
             <a href="#" onclick="history.back(); return false;" class="btn" style="background-color: transparent; color: var(--text-dark); border: 1px solid var(--text-dark); padding: 1rem 2.5rem; text-decoration: none; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease;">GO BACK</a>
             <a href="index.html" class="btn" style="background-color: var(--text-dark); color: white; border: 1px solid var(--text-dark); padding: 1rem 2.5rem; text-decoration: none; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease;">RETURN TO HOMEPAGE</a>
         </div>
@@ -58,10 +70,32 @@
 
         // Animation sequence
         tl.to('.logo', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' })
-          .to('.sub-heading', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4')
-          .to('.serif-heading', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4')
-          .to('p', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4')
-          .to('.btn', { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out' }, '-=0.4');
+          .to('.svg-path', { strokeDashoffset: 0, duration: 1.5, stagger: 0.2, ease: 'power2.inOut' }, '-=0.6')
+          .to('.sub-heading', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=1.0')
+          .to('.serif-heading', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.8')
+          .to('p', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.8')
+          .to('.btn', { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out' }, '-=0.8');
+
+        // 3D Tilt Animation
+        const card = document.getElementById('error-card');
+        document.body.style.perspective = "1000px";
+        
+        document.addEventListener('mousemove', (e) => {
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+            card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        });
+
+        // Smoothly return to center when mouse leaves
+        document.addEventListener('mouseleave', () => {
+            card.style.transition = "transform 0.5s ease";
+            card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        });
+        
+        // Remove transition on mouse enter to make it instantly responsive again
+        document.addEventListener('mouseenter', () => {
+            card.style.transition = "none";
+        });
     });
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
