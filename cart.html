@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -39,32 +39,11 @@
             <div class="cart-main">
                 <div class="cart-preheading">BAG</div>
                 <h1 class="cart-heading">Your selection</h1>
-                <div class="cart-item-count">1 ITEM</div>
+                <div class="cart-item-count" id="cart-item-count">0 ITEMS</div>
                 
                 <hr class="cart-divider">
                 
-                <!-- Cart Item -->
-                <div class="cart-item">
-                    <img src="assets/cardigan.webp" alt="Olive Knit Cardigan" class="cart-item-image">
-                    
-                    <div class="cart-item-info">
-                        <h3 class="cart-item-title">Olive Knit Cardigan</h3>
-                        <p class="cart-item-meta">MEN'S WEAR &middot; SIZE M</p>
-                    </div>
-                    
-                    <div class="cart-item-controls">
-                        <div class="cart-qty">
-                            <button class="cart-qty-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">remove</span></button>
-                            <input type="text" value="1" class="cart-qty-input" readonly>
-                            <button class="cart-qty-btn"><span class="material-symbols-outlined" style="vertical-align: middle;">add</span></button>
-                        </div>
-                        
-                        <button class="cart-item-remove" title="Remove item"><span class="material-symbols-outlined" style="vertical-align: middle;">delete</span></button>
-                        
-                        <div class="cart-item-price">$148</div>
-                    </div>
-                </div>
-                
+                <div id="cart-items-container"></div>
                 <hr class="cart-divider">
             </div>
 
@@ -75,7 +54,7 @@
                     
                     <div class="cart-summary-row">
                         <span>Subtotal</span>
-                        <span>$148</span>
+                        <span id="cart-subtotal">$0</span>
                     </div>
                     <div class="cart-summary-row">
                         <span>Shipping</span>
@@ -86,7 +65,7 @@
                     
                     <div class="cart-summary-total">
                         <span>Total</span>
-                        <span>$160</span>
+                        <span id="cart-total">$12</span>
                     </div>
                     
                     <button class="cart-checkout-btn" onclick="window.location.href='404.html';">

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -38,9 +38,12 @@
             <img src="assets/coat.webp" alt="Stackly Collection">
         </div>
         <div class="auth-content">
-            <div style="margin-bottom: 3rem;" class="auth-logo-container">
+            <div style="margin-bottom: 3rem; display: flex; flex-direction: column; align-items: flex-start; gap: 1rem;" class="auth-logo-container">
                 <a href="index.html">
                     <img src="assets/logo_0174.webp" alt="STACKLY Logo" style="height: 24px;" />
+                </a>
+                <a href="index.html" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-gray); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;">
+                    <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_back</span> Back to Home
                 </a>
             </div>
 
@@ -68,7 +71,7 @@
 
                 <div class="input-group">
                     <label>FULL NAME</label>
-                    <input type="text" placeholder="Ida Sï¿½rensen" required>
+                    <input type="text" id="signup-name" placeholder="Ida Sorensen" required>
                 </div>
                 <div class="input-group">
                     <label>EMAIL</label>
@@ -84,9 +87,21 @@
             <script>
                 document.getElementById('signup-form').addEventListener('submit', function(e) {
                     e.preventDefault();
-                    // In a real app, you would create the account here.
-                    // For the prototype, we redirect to the sign-in page.
-                    window.location.href = 'signin.html';
+                    // Save name
+                    const nameInput = document.getElementById('signup-name');
+                    if (nameInput && nameInput.value) {
+                        localStorage.setItem('stackly_user_name', nameInput.value);
+                    }
+                    
+                    const email = document.querySelector('input[type="email"]').value;
+                    if (email) localStorage.setItem('stackly_user_email', email);
+                    
+                    const role = document.querySelector('input[name="role"]:checked').value;
+                    if (role === 'admin') {
+                        window.location.href = 'admin-dashboard.html';
+                    } else {
+                        window.location.href = 'customer-dashboard.html';
+                    }
                 });
             </script>
 
@@ -95,16 +110,16 @@
             </div>
 
             <div class="social-login">
-                <button class="social-btn">
+                <button class="social-btn" onclick="window.location.href='404.html';">
                     <span><span class="material-symbols-outlined" style="margin-right: 0.5rem; vertical-align: middle;">public</span> CONTINUE WITH GOOGLE</span>
                     <span class="social-handle">@STACKLY</span>
                 </button>
-                <button class="social-btn">
+                <button class="social-btn" onclick="window.location.href='404.html';">
                     <span><span class="material-symbols-outlined" style="margin-right: 0.5rem; vertical-align: middle;">phone_iphone</span> CONTINUE WITH APPLE</span>
                     <span class="social-handle">@STACKLY</span>
                 </button>
-                <button class="social-btn">
-                    <span>CONTINUE WITH Instagram â€· @stackly.studio</span>
+                <button class="social-btn" onclick="window.location.href='404.html';">
+                    <span>CONTINUE WITH Instagram &middot; @stackly.studio</span>
                 </button>
             </div>
 

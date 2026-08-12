@@ -3068,7 +3068,7 @@ body.no-scroll { overflow: hidden !important; height: 100vh; }
 /* --- STRICT GLOBAL OVERFLOW & SCROLL PREVENTION ---                        */
 /* ========================================================================= */
 
-html, body {
+body {
     width: 100%;
     max-width: 100vw;
     overflow-x: hidden !important;

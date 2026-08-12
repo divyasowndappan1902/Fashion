@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -51,7 +51,7 @@
             <div class="dashboard-header">
                 <div>
                     <span class="sub-heading">WELCOME BACK</span>
-                    <h1 class="serif-heading">Ida SÃƒÂ¸rensen</h1>
+                    <h1 class="serif-heading user-name-display">Ida Sørensen</h1>
                 </div>
             </div>
 
@@ -173,17 +173,23 @@
                         <form>
                             <div class="input-group" style="margin-bottom: 1.5rem;">
                                 <label style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--text-gray); display: block; margin-bottom: 0.5rem;">FULL NAME</label>
-                                <input type="text" value="Ida SÃƒÂ¸rensen" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
+                                <input type="text" class="user-name-input" value="Ida Sørensen" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
                             </div>
                             <div class="input-group" style="margin-bottom: 1.5rem;">
                                 <label style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--text-gray); display: block; margin-bottom: 0.5rem;">EMAIL ADDRESS</label>
-                                <input type="email" value="ida.sorensen@example.com" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
+                                <input type="email" class="user-email-input" value="ida.sorensen@example.com" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
                             </div>
                             <div class="input-group" style="margin-bottom: 2rem;">
                                 <label style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--text-gray); display: block; margin-bottom: 0.5rem;">PHONE NUMBER</label>
                                 <input type="tel" value="+45 12 34 56 78" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
                             </div>
-                            <button type="button" class="auth-submit-btn" style="width: auto; padding: 0.875rem 2rem;" onclick="window.location.href='404.html'">SAVE CHANGES</button>
+                            <button type="button" class="auth-submit-btn" style="width: auto; padding: 0.875rem 2rem;" onclick="
+                                const name = this.parentElement.querySelector('.user-name-input').value;
+                                const email = this.parentElement.querySelector('.user-email-input').value;
+                                if(name) localStorage.setItem('stackly_user_name', name);
+                                if(email) localStorage.setItem('stackly_user_email', email);
+                                window.location.reload();
+                            ">SAVE CHANGES</button>
                         </form>
                     </div>
 
@@ -195,8 +201,8 @@
                             <span style="position: absolute; top: 1.5rem; right: 1.5rem; background: #f3ede6; color: var(--text-dark); font-size: 0.7rem; font-weight: 600; padding: 0.25rem 0.5rem; border-radius: 4px; letter-spacing: 0.05em;">DEFAULT</span>
                             <p style="font-weight: 600; margin-bottom: 0.75rem;">Home</p>
                             <p style="color: var(--text-gray); font-size: 0.95rem; line-height: 1.6;">
-                                Ida SÃƒÂ¸rensen<br>
-                                NÃƒÂ¸rrebrogade 12<br>
+                                <span class="user-name-display">Ida Sørensen</span><br>
+                                Nørrebrogade 12<br>
                                 2200 Copenhagen N<br>
                                 Denmark
                             </p>
