@@ -3,7 +3,7 @@ const fs = require('fs');
 const sharp = require('sharp'); // sharp should be available from previous tasks
 
 const url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Camisade_pu%C3%B1o_doble.jpg/500px-Camisade_pu%C3%B1o_doble.jpg';
-const outputPath = 'c:/Users/Admin/Desktop/fashion/assets/casual_shirt.webp';
+const outputPath = 'c:/Users/Admin/Desktop/fashion/assets/casual_assets/shirt.webp';
 
 https.get(url, (res) => {
     let chunks = [];

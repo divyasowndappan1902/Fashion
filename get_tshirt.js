@@ -3,7 +3,7 @@ const fs = require('fs');
 const sharp = require('sharp');
 
 const url = 'https://en.wikipedia.org/w/api.php?action=query&titles=T-shirt&prop=pageimages&format=json&pithumbsize=600';
-const outputPath = 'c:/Users/Admin/Desktop/fashion/assets/performance_active_tee.webp';
+const outputPath = 'c:/Users/Admin/Desktop/fashion/assets/performance_active_assets/tee.webp';
 
 const options = {
     headers: {

@@ -3201,7 +3201,6 @@ img, picture, video, canvas, svg, iframe {
     body {
         padding-top: 70px !important; 
     }
-    
     /* Ensure mobile menu drops down from the fixed header correctly */
     .nav-links {
         top: 70px !important;
@@ -3220,7 +3219,6 @@ img, picture, video, canvas, svg, iframe {
     }
 }
 
-
 /* --- AUTH PAGES MOBILE FIXES --- */
 .desktop-only { display: block; }
 .mobile-auth-header { display: none !important; }
@@ -3230,6 +3228,7 @@ img, picture, video, canvas, svg, iframe {
         display: block !important;
         height: auto !important;
         background-color: var(--bg-light);
+        overflow: visible !important;
     }
     .auth-layout {
         display: flex !important;
@@ -3269,12 +3268,12 @@ img, picture, video, canvas, svg, iframe {
         justify-content: flex-start !important;
     }
 }
+
 @media (max-width: 480px) {
     .mobile-auth-header { padding: 1rem !important; }
     .auth-image { padding: 1rem !important; margin-top: 65px; }
     .auth-content { padding: 1.5rem !important; }
 }
-
 
 /* ========================================================================= */
 /* --- PDP MOBILE FIXES ---                                                  */
