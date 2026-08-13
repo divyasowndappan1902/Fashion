@@ -4160,3 +4160,16 @@ body {
         padding-right: 0.5rem;
     }
 }
+
+
+/* Added for perfect mobile view with overflow hidden on header */
+@media (max-width: 768px) {
+    .header { overflow: hidden !important; }
+    body.no-scroll .header { overflow: visible !important; }
+}
+
+
+/* Final fix for mobile horizontal scroll */
+@media (max-width: 768px) {
+  html, body { overflow-x: hidden !important; width: 100% !important; margin: 0 !important; padding-left: 0 !important; padding-right: 0 !important; }
+}
