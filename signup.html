@@ -12,6 +12,7 @@
     <!-- FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" rel="stylesheet" />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="auth-page">
 
@@ -79,7 +80,11 @@
                 </div>
                 <div class="input-group">
                     <label>PASSWORD</label>
-                    <input type="password" placeholder="........" minlength="8" required>
+                    <input type="password" id="signup-password" placeholder="........" minlength="8" required>
+                </div>
+                <div class="input-group">
+                    <label>CONFIRM PASSWORD</label>
+                    <input type="password" id="signup-confirm-password" placeholder="........" minlength="8" required>
                 </div>
                 <button type="submit" class="auth-submit-btn">CREATE ACCOUNT <span class="material-symbols-outlined" style="vertical-align: middle;">arrow_forward</span></button>
             </form>
@@ -97,11 +102,7 @@
                     if (email) localStorage.setItem('stackly_user_email', email);
                     
                     const role = document.querySelector('input[name="role"]:checked').value;
-                    if (role === 'admin') {
-                        window.location.href = 'admin-dashboard.html';
-                    } else {
-                        window.location.href = 'customer-dashboard.html';
-                    }
+                    window.location.href = 'signin.html';
                 });
             </script>
 
@@ -153,6 +154,10 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
+
+
+
+
 
 
 

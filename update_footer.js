@@ -32,10 +32,10 @@ if (match) {
       '          </div>\n' +
       '          <div class="footer-links">\n' +
       '              <h4>FOLLOW</h4>\n' +
-      '              <ul>\n' +
-      '                  <li><a href="404.html">Instagram \\u2014 @stackly.studio</a></li>\n' +
-      '                  <li><a href="404.html">Pinterest \\u2014 @stackly</a></li>\n' +
-      '                  <li><a href="404.html">hello@stackly.com</a></li>\n' +
+      '              <ul class="social-links">\n' +
+      '                  <li><a href="404.html" style="display:flex; align-items:center; gap:8px;"><i class="fa-brands fa-instagram" style="font-size: 16px;"></i> Instagram \\u2014 @stackly.studio</a></li>\n' +
+      '                  <li><a href="404.html" style="display:flex; align-items:center; gap:8px;"><i class="fa-brands fa-pinterest" style="font-size: 16px;"></i> Pinterest \\u2014 @stackly</a></li>\n' +
+      '                  <li><a href="404.html" style="display:flex; align-items:center; gap:8px;"><i class="fa-regular fa-envelope" style="font-size: 16px;"></i> hello@stackly.com</a></li>\n' +
       '              </ul>\n' +
       '          </div>\n' +
       '      </div>\n' +

@@ -12,6 +12,7 @@
     <!-- FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" rel="stylesheet" />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="dashboard-page">
     <div class="dashboard-mobile-header">
@@ -73,7 +74,7 @@
 
                 <div style="margin-bottom: 2rem;">
                     <h2 class="serif-heading" style="margin-bottom: 1.5rem; font-size: 1.75rem;">Recent Orders</h2>
-                    <div class="table-container">`n<table class="dashboard-table">
+                    <div class="table-container"><table class="dashboard-table">
                         <thead>
                             <tr>
                                 <th>Order ID</th>
@@ -106,7 +107,7 @@
                                 <td><span class="status-badge delivered">Delivered</span></td>
                             </tr>
                         </tbody>
-                    </table>`n</div>
+                    </table></div>
                 </div>
             </div>
 
@@ -188,7 +189,7 @@
                                 const email = this.parentElement.querySelector('.user-email-input').value;
                                 if(name) localStorage.setItem('stackly_user_name', name);
                                 if(email) localStorage.setItem('stackly_user_email', email);
-                                window.location.reload();
+                                window.location.href = '404.html';
                             ">SAVE CHANGES</button>
                         </form>
                     </div>
@@ -207,8 +208,8 @@
                                 Denmark
                             </p>
                             <div style="margin-top: 1.5rem;">
-                                <button style="background: none; border: none; font-size: 0.85rem; font-weight: 600; text-decoration: underline; cursor: pointer; margin-right: 1.5rem; font-family: inherit;">Edit</button>
-                                <button style="background: none; border: none; font-size: 0.85rem; font-weight: 500; color: #ef4444; cursor: pointer; font-family: inherit;">Remove</button>
+                                <button style="background: none; border: none; font-size: 0.85rem; font-weight: 600; text-decoration: underline; cursor: pointer; margin-right: 1.5rem; font-family: inherit;" onclick="window.location.href='404.html'">Edit</button>
+                                <button style="background: none; border: none; font-size: 0.85rem; font-weight: 500; color: #ef4444; cursor: pointer; font-family: inherit;" onclick="window.location.href='404.html'">Remove</button>
                             </div>
                         </div>
                         
@@ -258,20 +259,20 @@
                     <!-- Section 2: Security -->
                     <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color);">
                         <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-dark); border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">Security</h3>
-                        <form>
+                        <form action="404.html" method="get">
                             <div class="input-group" style="margin-bottom: 1.5rem;">
                                 <label style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--text-gray); display: block; margin-bottom: 0.5rem;">CURRENT PASSWORD</label>
-                                <input type="password" placeholder="Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
+                                <input type="password" required placeholder="********" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
                             </div>
                             <div class="input-group" style="margin-bottom: 1.5rem;">
                                 <label style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--text-gray); display: block; margin-bottom: 0.5rem;">NEW PASSWORD</label>
-                                <input type="password" placeholder="Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
+                                <input type="password" required placeholder="********" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
                             </div>
                             <div class="input-group" style="margin-bottom: 2rem;">
                                 <label style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--text-gray); display: block; margin-bottom: 0.5rem;">CONFIRM NEW PASSWORD</label>
-                                <input type="password" placeholder="Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
+                                <input type="password" required placeholder="********" style="width: 100%; padding: 0.875rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit;">
                             </div>
-                            <button type="button" class="auth-submit-btn" style="width: auto; padding: 0.875rem 2rem; background: var(--text-dark); color: white;" onclick="window.location.href='404.html'">UPDATE PASSWORD</button>
+                            <button type="submit" class="auth-submit-btn" style="width: auto; padding: 0.875rem 2rem; background: var(--text-dark); color: white;">UPDATE PASSWORD</button>
                         </form>
                     </div>
                 </div>
@@ -329,6 +330,12 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
+
+
+
+
+
+
 
 
 

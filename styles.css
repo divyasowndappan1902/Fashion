@@ -5,6 +5,10 @@
     --text-light: #ffffff;
     --bg-light: #ffffff;
     --border-color: #e5e7eb;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
 }
 
 * {
@@ -648,21 +652,25 @@ body {
 
 .read-more-btn {
     margin-top: 0.5rem;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     color: var(--text-dark);
+    background-color: transparent;
+    border: 1px solid var(--border-color);
     text-transform: uppercase;
     text-decoration: none;
-    border-bottom: 1px solid var(--text-dark);
     align-self: flex-start;
-    padding-bottom: 0.2rem;
-    transition: color 0.3s ease, border-color 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .read-more-btn:hover {
-    color: var(--text-gray);
-    border-color: var(--text-gray);
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    border-color: var(--text-dark);
 }
 
 /* Responsive Journal Grid */
@@ -931,6 +939,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+    position: sticky;
+    top: 100px;
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+    /* Optional: hide scrollbar for cleaner look */
+    scrollbar-width: thin;
 }
 
 .sidebar-header {
@@ -1245,6 +1259,40 @@ body {
 .auth-form .input-group input {
   font-size: 0.75rem;
   padding: 0.5rem 0;
+}
+.auth-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  margin-bottom: 1.5rem;
+  margin-top: -0.5rem;
+}
+.auth-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-gray);
+  cursor: pointer;
+  letter-spacing: 0;
+  font-weight: normal;
+  text-transform: none;
+  font-size: 0.75rem;
+  margin-bottom: 0;
+}
+.auth-options input[type="checkbox"] {
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  padding: 0;
+}
+.forgot-password {
+  color: var(--text-dark);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 500;
 }
 .auth-submit-btn {
   background-color: #3b2a25;
@@ -3032,7 +3080,25 @@ img {
     .hero-text h1 { font-size: 2rem !important; }
 }
 
-@media (max-width: 768px) { .header-icons { display: none !important; } }
+@media (max-width: 768px) {
+    .header-icons {
+        display: flex !important;
+        margin-left: auto;
+        margin-right: 1rem;
+        gap: 1rem !important;
+        order: 2;
+    }
+    .mobile-menu-toggle {
+        order: 3;
+    }
+    .logo {
+        order: 1;
+    }
+    /* Hide search text/icon if it takes up too much space on very small screens */
+    .header-icons .search {
+        display: none !important;
+    }
+}
 
 /* Mobile Menu Fullscreen & Login Additions */
 .mobile-only {
@@ -4066,5 +4132,31 @@ body {
     .dashboard-layout-2-1 {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+    
+    .view-all-btn,
+    .shop-collection-btn,
+    .subscribe-btn,
+    .read-more-btn {
+        align-self: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: auto !important;
+        display: inline-flex !important;
+        justify-content: center !important;
+    }
+    
+    .faq {
+        padding: 3rem 1.25rem !important;
+    }
+    
+    .faq-header h2, .faq-header .serif-heading {
+        font-size: 1.75rem !important;
+        line-height: 1.2;
+    }
+    
+    .faq-question {
+        font-size: 0.95rem !important;
+        padding-right: 0.5rem;
     }
 }

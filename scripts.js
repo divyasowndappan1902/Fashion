@@ -4,19 +4,98 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation(); // Prevent card click
+            
+            const card = btn.closest('.product-card');
+            if (card) {
+                const img = card.querySelector('img') ? card.querySelector('img').src : '';
+                const title = card.querySelector('.product-title') ? card.querySelector('.product-title').textContent : '';
+                const price = card.querySelector('.product-price') ? card.querySelector('.product-price').textContent : '';
+                const category = card.querySelector('.product-category') ? card.querySelector('.product-category').textContent : '';
+                
+                let wishlist = JSON.parse(localStorage.getItem('stackly_wishlist') || '[]');
+                // Add to start of array, avoiding exact duplicates based on title
+                if (!wishlist.some(item => item.title === title)) {
+                    wishlist.unshift({ img, title, price, category });
+                    localStorage.setItem('stackly_wishlist', JSON.stringify(wishlist));
+                }
+            }
             window.location.href = 'wishlist.html';
         });
     });
 
-    // Make product cards clickable to redirect to product overview
-    const productCards = document.querySelectorAll('.product-card');
-    productCards.forEach(card => {
-        card.style.cursor = 'pointer';
-        card.addEventListener('click', (e) => {
-            // Do not redirect if they click add to cart or wishlist
-            if (!e.target.closest('.add-to-cart-btn') && !e.target.closest('.wishlist-btn')) {
+    // Populate Wishlist page dynamically
+    if (window.location.pathname.includes('wishlist.html')) {
+        const grid = document.querySelector('.product-grid');
+        if (grid) {
+            let wishlist = JSON.parse(localStorage.getItem('stackly_wishlist') || '[]');
+            if (wishlist.length > 0) {
+                // Prepend dynamically saved items
+                wishlist.reverse().forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'product-card';
+                    card.innerHTML = `
+                        <div class="product-image">
+                            <button class="wishlist-btn active"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; vertical-align: middle;">favorite</span></button>
+                            <img src="${item.img}" alt="${item.title}">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-title-row">
+                                <span class="product-title">${item.title}</span>
+                                <span class="product-price">${item.price}</span>
+                            </div>
+                            <span class="product-category">${item.category}</span>
+                        </div>
+                    `;
+                    grid.insertBefore(card, grid.firstChild);
+                });
+            }
+        }
+    }
+
+    // Make product images clickable to redirect to product overview
+    const productImages = document.querySelectorAll('.product-image');
+    productImages.forEach(container => {
+        container.style.cursor = 'pointer';
+        container.addEventListener('click', (e) => {
+            if (!e.target.closest('.wishlist-btn') && !e.target.closest('.badge')) {
+                const card = container.closest('.product-card');
+                if (card) {
+                    const img = container.querySelector('img');
+                    const title = card.querySelector('.product-title');
+                    const price = card.querySelector('.product-price');
+                    
+                    if (img) localStorage.setItem('pdp_img', img.src);
+                    if (title) localStorage.setItem('pdp_title', title.textContent);
+                    if (price) localStorage.setItem('pdp_price', price.textContent);
+                }
                 window.location.href = 'product.html';
             }
+        });
+    });
+
+    // Populate Product Detail Page (PDP) dynamically
+    const pdpMainImg = document.querySelector('.pdp-main-image');
+    if (pdpMainImg) {
+        const savedImg = localStorage.getItem('pdp_img');
+        const savedTitle = localStorage.getItem('pdp_title');
+        const savedPrice = localStorage.getItem('pdp_price');
+        
+        if (savedImg) pdpMainImg.src = savedImg;
+        if (savedTitle) {
+            const titleEl = document.querySelector('.pdp-title');
+            if (titleEl) titleEl.textContent = savedTitle;
+        }
+        if (savedPrice && savedPrice.trim() !== '') {
+            const priceEl = document.querySelector('.pdp-price');
+            if (priceEl) priceEl.textContent = savedPrice;
+        }
+    }
+    // Handle newsletter subscription (bypass HTML5 validation for instant redirect)
+    const subscribeBtns = document.querySelectorAll('.subscribe-btn');
+    subscribeBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = '404.html';
         });
     });
 
@@ -345,23 +424,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// Hero Background Slideshow
-document.addEventListener('DOMContentLoaded', () => {
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        const images = [
-            'url("assets/hero-bg.webp")',
-            'url("assets/fabrics.webp")',
-            'url("assets/about_ateliers.webp")'
-        ];
-        let currentIndex = 0;
-        
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % images.length;
-            hero.style.backgroundImage = images[currentIndex];
-        }, 5000); // Change image every 5 seconds
-    }
-});
+
 
 // Dynamic User Email
 (function() {
