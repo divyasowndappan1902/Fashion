@@ -1,27 +1,52 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const wishlistBtns = document.querySelectorAll('.wishlist-btn');
-    wishlistBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.wishlist-btn');
+        if (btn) {
             e.preventDefault();
             e.stopPropagation(); // Prevent card click
             
             const card = btn.closest('.product-card');
             if (card) {
-                const img = card.querySelector('img') ? card.querySelector('img').src : '';
                 const title = card.querySelector('.product-title') ? card.querySelector('.product-title').textContent : '';
-                const price = card.querySelector('.product-price') ? card.querySelector('.product-price').textContent : '';
-                const category = card.querySelector('.product-category') ? card.querySelector('.product-category').textContent : '';
-                
                 let wishlist = JSON.parse(localStorage.getItem('stackly_wishlist') || '[]');
-                // Add to start of array, avoiding exact duplicates based on title
-                if (!wishlist.some(item => item.title === title)) {
-                    wishlist.unshift({ img, title, price, category });
+                
+                const isWishlistPage = window.location.pathname.includes('wishlist.html');
+                
+                if (isWishlistPage || btn.classList.contains('active')) {
+                    // Remove from wishlist
+                    wishlist = wishlist.filter(item => item.title !== title);
                     localStorage.setItem('stackly_wishlist', JSON.stringify(wishlist));
+                    
+                    if (isWishlistPage) {
+                        card.remove();
+                        updateWishlistCount();
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                } else {
+                    // Add to wishlist
+                    const img = card.querySelector('img') ? card.querySelector('img').src : '';
+                    const price = card.querySelector('.product-price') ? card.querySelector('.product-price').textContent : '';
+                    const category = card.querySelector('.product-category') ? card.querySelector('.product-category').textContent : '';
+                    
+                    if (!wishlist.some(item => item.title === title)) {
+                        wishlist.unshift({ img, title, price, category });
+                        localStorage.setItem('stackly_wishlist', JSON.stringify(wishlist));
+                    }
+                    btn.classList.add('active');
+                    window.location.href = 'wishlist.html';
                 }
             }
-            window.location.href = 'wishlist.html';
-        });
+        }
     });
+    
+    function updateWishlistCount() {
+        const subtitle = document.querySelector('.wishlist-subtitle');
+        if (subtitle) {
+            const count = document.querySelectorAll('.product-grid .product-card').length;
+            subtitle.textContent = `${count} PIECE${count !== 1 ? 'S' : ''} SAVED`;
+        }
+    }
 
     // Populate Wishlist page dynamically
     if (window.location.pathname.includes('wishlist.html')) {
@@ -49,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     grid.insertBefore(card, grid.firstChild);
                 });
             }
+            updateWishlistCount();
         }
     }
 
