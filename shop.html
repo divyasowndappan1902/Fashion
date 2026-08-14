@@ -15,7 +15,7 @@
 <body>
 <header class="header">
 <div class="logo">
-<img src="assets/logo_0174.webp" alt="STACKLY Logo" class="logo-img" />
+<a href="index.html"><img src="assets/logo_0174.webp" alt="STACKLY Logo" class="logo-img" /></a>
 </div>
 <button class="mobile-menu-toggle" aria-label="Toggle menu" style="display: none; background: none; border: none; cursor: pointer; color: var(--text-dark);"><span class="material-symbols-outlined" style="font-size: 1.5rem;">menu</span></button>
         <nav class="nav-links">
@@ -37,12 +37,12 @@
 <span class="sub-heading">COLLECTION</span>
 <h1 class="serif-heading">Everything in the studio</h1>
 <p>30 pieces, restocked in small runs. Filter by category, price, colour and rating.</p>
-<button class="mobile-filter-btn" id="mobileFilterBtn" onclick="window.location.href='404.html'"><span class="material-symbols-outlined" style="vertical-align: middle;">tune</span> Filters</button>
+<button class="mobile-filter-btn" id="mobileFilterBtn" onclick="document.querySelector('.shop-sidebar').classList.add('open')"><span class="material-symbols-outlined" style="vertical-align: middle;">tune</span> Filters</button>
 </div>
 <div class="shop-layout">
 <aside class="shop-sidebar">
 <div class="sidebar-header">
-<button class="close-sidebar-btn" id="closeSidebarBtn"><span class="material-symbols-outlined" style="vertical-align: middle;">close</span></button> <span class="sidebar-title">FILTERS</span>
+<button class="close-sidebar-btn" id="closeSidebarBtn" onclick="document.querySelector('.shop-sidebar').classList.remove('open')"><span class="material-symbols-outlined" style="vertical-align: middle;">close</span></button> <span class="sidebar-title">FILTERS</span>
 </div>
 <div class="search-box">
 <span class="material-symbols-outlined" style="vertical-align: middle;">search</span>
@@ -51,11 +51,11 @@
 <div class="filter-group">
 <h4>CATEGORY</h4>
 <ul>
-<li><a class="active" href="404.html">All</a></li>
-<li><a href="404.html">Men's Wear</a></li>
-<li><a href="404.html">Women's Wear</a></li>
-<li><a href="404.html">Essentials</a></li>
-<li><a href="404.html">Accessories</a></li>
+<li><a class="active" href="shop.html">All</a></li>
+<li><a href="shop.html">Men's Wear</a></li>
+<li><a href="shop.html">Women's Wear</a></li>
+<li><a href="shop.html">Essentials</a></li>
+<li><a href="shop.html">Accessories</a></li>
 </ul>
 </div>
 <div class="filter-group">
@@ -778,7 +778,7 @@
       <div class="footer-grid">
           <div class="footer-brand">
               <div class="logo">
-                  <img src="assets/logo_0174.webp" alt="STACKLY Logo" class="logo-img" />
+                  <a href="index.html"><img src="assets/logo_0174.webp" alt="STACKLY Logo" class="logo-img" /></a>
               </div>
               <p>Premium looks, everyday comfort and honest pricing &mdash; made for real life.</p>
           </div>
@@ -786,8 +786,8 @@
               <h4>SHOP</h4>
               <ul>
                   <li><a href="404.html">New arrivals</a></li>
-                  <li><a href="404.html">Men's wear</a></li>
-                  <li><a href="404.html">Women's wear</a></li>
+                  <li><a href="shop.html">Men's Wear</a></li>
+                  <li><a href="shop.html">Women's Wear</a></li>
               </ul>
           </div>
           <div class="footer-links">

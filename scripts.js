@@ -228,6 +228,42 @@ document.addEventListener('DOMContentLoaded', () => {
     
     setCurrentPageActive();
 
+    // Checkbox Interaction
+    const newFeaturedCheckbox = document.getElementById('new-featured');
+    if (newFeaturedCheckbox) {
+        newFeaturedCheckbox.addEventListener('change', () => {
+            applyFilters();
+            
+            // Close sidebar on mobile to view the filtered images
+            const sidebar = document.querySelector('.shop-sidebar');
+            if (sidebar && sidebar.classList.contains('open')) {
+                sidebar.classList.remove('open');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    }
+
+    // Category Links Interaction
+    const categoryLinks = document.querySelectorAll('.filter-group ul a');
+    categoryLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const products = document.querySelectorAll('.product-card');
+            if (products.length > 0) {
+                e.preventDefault();
+                categoryLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                applyFilters();
+                
+                // Close sidebar on mobile to view the filtered images
+                const sidebar = document.querySelector('.shop-sidebar');
+                if (sidebar && sidebar.classList.contains('open')) {
+                    sidebar.classList.remove('open');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }
+        });
+    });
+
     // Filter Pills Interaction
     const pillGroups = document.querySelectorAll('.pill-group');
     pillGroups.forEach(group => {
@@ -244,12 +280,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     if (anyPill) anyPill.classList.remove('active');
                     pill.classList.toggle('active');
-                    const hasActive = Array.from(pills).some(p => p.classList.contains('active'));
-                    if (!hasActive && anyPill) {
+                    
+                    const activePills = group.querySelectorAll('.pill.active');
+                    if (activePills.length === 0 && anyPill) {
                         anyPill.classList.add('active');
                     }
                 }
                 applyFilters();
+                
+                // Close sidebar on mobile to view the filtered images
+                const sidebar = document.querySelector('.shop-sidebar');
+                if (sidebar && sidebar.classList.contains('open')) {
+                    sidebar.classList.remove('open');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
             });
         });
     });
@@ -259,9 +303,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!products.length) return;
         
         const filterGroups = document.querySelectorAll('.filter-group');
+        let activeCategory = 'ALL';
         let activePrice = 'ANY PRICE';
         let activeColors = [];
         let activeRating = 'ANY';
+        let newFeaturedOnly = false;
+        
+        const newFeaturedCheckbox = document.getElementById('new-featured');
+        if (newFeaturedCheckbox && newFeaturedCheckbox.checked) {
+            newFeaturedOnly = true;
+        }
         
         filterGroups.forEach(group => {
             const h4 = group.querySelector('h4');
@@ -269,7 +320,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const type = h4.textContent.trim().toUpperCase();
             const activePills = Array.from(group.querySelectorAll('.pill.active')).map(p => p.textContent.trim().toUpperCase());
             
-            if (type === 'PRICE' && activePills.length > 0) {
+            if (type === 'CATEGORY') {
+                const activeLink = group.querySelector('a.active');
+                if (activeLink) activeCategory = activeLink.textContent.trim().toUpperCase();
+            } else if (type === 'PRICE' && activePills.length > 0) {
                 activePrice = activePills[0];
             } else if (type === 'COLOUR') {
                 activeColors = activePills;
@@ -282,6 +336,17 @@ document.addEventListener('DOMContentLoaded', () => {
         
         products.forEach(product => {
             let isVisible = true;
+            
+            if (newFeaturedOnly) {
+                const badge = product.querySelector('.badge');
+                if (!badge) isVisible = false;
+            }
+            
+            if (activeCategory !== 'ALL') {
+                const productCategory = (product.getAttribute('data-category') || '').toUpperCase();
+                if (productCategory !== activeCategory) isVisible = false;
+            }
+            
             if (activePrice !== 'ANY PRICE' && activePrice !== 'ANY') {
                 const price = parseFloat(product.getAttribute('data-price') || 0);
                 if (activePrice === 'UNDER $75' && price >= 75) isVisible = false;
